@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="zh-TW">
 <head>
 <meta charset="UTF-8">
@@ -8,49 +8,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Rajdhani:wght@400;500;600;700&family=Noto+Sans+TC:wght@300;400;500;700&display=swap');
 
 :root {
-  --bg: #0a0c0f;
-  --panel: #0f1317;
-  --panel2: #141820;
-  --border: #1e2530;
-  --border-bright: #2a3545;
-  --amber: #f5a623;
-  --amber-dim: #8a5d12;
-  --green: #39d353;
-  --green-dim: #1a5c28;
-  --red: #e05252;
-  --blue: #4db8ff;
-  --blue-dim: #1a4060;
-  --text: #c8d4e0;
-  --text-dim: #5a6a7a;
-  --text-bright: #eaf2ff;
-  --accent: #f5a623;
-  --warning-bg: #1a1200;
-  --caution-bg: #0a1520;
-  --mel-bg: #0d1520;
-  --mel-border: #1e3050;
+  --bg:#0a0c0f;--panel:#0f1317;--panel2:#141820;--border:#1e2530;--border-bright:#2a3545;
+  --amber:#f5a623;--amber-dim:#8a5d12;--green:#39d353;--green-dim:#1a5c28;--red:#e05252;
+  --blue:#4db8ff;--blue-dim:#1a4060;--text:#c8d4e0;--text-dim:#5a6a7a;--text-bright:#eaf2ff;
+  --accent:#f5a623;--warning-bg:#1a1200;--caution-bg:#0a1520;
+  --mel-bg:#0d1520;--mel-border:#1e3050;
 }
-
 body.day-mode {
-  --bg: #f0f2f5;
-  --panel: #ffffff;
-  --panel2: #f5f7fa;
-  --border: #d0d8e4;
-  --border-bright: #b0bcd0;
-  --amber: #c47800;
-  --amber-dim: #e8b040;
-  --green: #1a7a30;
-  --green-dim: #2aa048;
-  --red: #c03030;
-  --blue: #1a6ab8;
-  --blue-dim: #5090d0;
-  --text: #2a3a4a;
-  --text-dim: #7a8a9a;
-  --text-bright: #0a1828;
-  --accent: #c47800;
-  --warning-bg: #fff8e0;
-  --caution-bg: #e8f2ff;
-  --mel-bg: #eef4ff;
-  --mel-border: #b0c8e8;
+  --bg:#f0f2f5;--panel:#ffffff;--panel2:#f5f7fa;--border:#d0d8e4;--border-bright:#b0bcd0;
+  --amber:#c47800;--amber-dim:#e8b040;--green:#1a7a30;--green-dim:#2aa048;--red:#c03030;
+  --blue:#1a6ab8;--blue-dim:#5090d0;--text:#2a3a4a;--text-dim:#7a8a9a;--text-bright:#0a1828;
+  --accent:#c47800;--warning-bg:#fff8e0;--caution-bg:#e8f2ff;--mel-bg:#eef4ff;--mel-border:#b0c8e8;
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -86,16 +54,13 @@ body::before {
   padding: 12px 20px;
   display: flex;
   align-items: center;
-  gap: 16px;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  flex-wrap: wrap;
+  gap: 16px; flex-wrap:wrap;
+  position: sticky; top: 0; z-index: 100;
 }
 
 .header-logo {
   font-family: 'Share Tech Mono', monospace;
-  font-size: 13px;
+  font-size: 11px;
   color: var(--amber);
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -105,7 +70,7 @@ body::before {
 .header-title {
   font-family: 'Rajdhani', sans-serif;
   font-weight: 700;
-  font-size: 22px;
+  font-size: 20px;
   color: var(--text-bright);
   letter-spacing: 3px;
   text-transform: uppercase;
@@ -113,7 +78,7 @@ body::before {
 
 .header-sub {
   font-family: 'Share Tech Mono', monospace;
-  font-size: 12px;
+  font-size: 10px;
   color: var(--text-dim);
   letter-spacing: 1px;
   flex: 1;
@@ -151,7 +116,7 @@ body::before {
   border: 1px solid var(--border-bright);
   color: var(--text-bright);
   font-family: 'Share Tech Mono', monospace;
-  font-size: 15px;
+  font-size: 13px;
   padding: 8px 12px;
   outline: none;
   letter-spacing: 1px;
@@ -169,46 +134,22 @@ body::before {
 }
 
 /* LAYOUT */
-.layout {
-  display: flex;
-  min-height: calc(100vh - 100px);
-}
-
-/* RESIZER */
-.resizer {
-  width: 6px;
-  background: var(--border);
-  cursor: col-resize;
-  flex-shrink: 0;
-  transition: background 0.15s;
-  position: relative;
-  z-index: 10;
-}
-.resizer:hover, .resizer.dragging { background: var(--amber); }
+.layout{display:flex;min-height:calc(100vh - 100px);}
+.resizer{width:6px;background:var(--border);cursor:col-resize;flex-shrink:0;transition:background 0.15s;}
+.resizer:hover,.resizer.dragging{background:var(--amber);}
 
 /* SIDEBAR */
-.sidebar {
-  background: var(--panel);
-  border-right: 1px solid var(--border);
-  overflow-y: auto;
-  height: calc(100vh - 100px);
-  position: sticky;
-  top: 100px;
-  width: 260px;
-  min-width: 140px;
-  max-width: 480px;
-  flex-shrink: 0;
-}
+.sidebar{background:var(--panel);border-right:1px solid var(--border);overflow-y:auto;height:calc(100vh - 100px);position:sticky;top:100px;width:260px;min-width:140px;max-width:480px;flex-shrink:0;}
 
 .sidebar-section {
   border-bottom: 1px solid var(--border);
 }
 
 .sidebar-section-header {
-  padding: 11px 14px;
+  padding: 10px 14px;
   font-family: 'Share Tech Mono', monospace;
-  font-size: 11px;
-  letter-spacing: 2px;
+  font-size: 9px;
+  letter-spacing: 3px;
   text-transform: uppercase;
   color: var(--amber);
   background: rgba(245,166,35,0.05);
@@ -237,8 +178,8 @@ body::before {
 .sidebar-items.collapsed { max-height: 0; }
 
 .sidebar-item {
-  padding: 8px 14px 8px 22px;
-  font-size: 14px;
+  padding:8px 14px 8px 22px;
+  font-size:14px;
   color: var(--text-dim);
   cursor: pointer;
   transition: all 0.15s;
@@ -270,13 +211,7 @@ body::before {
 }
 
 /* MAIN CONTENT */
-.main {
-  overflow-y: auto;
-  padding: 20px;
-  background: var(--bg);
-  flex: 1;
-  min-width: 0;
-}
+.main{overflow-y:auto;padding:20px;background:var(--bg);flex:1;min-width:0;}
 
 /* HOME PAGE */
 .home-page {
@@ -316,14 +251,14 @@ body::before {
 
 .chapter-card .me-code {
   font-family: 'Share Tech Mono', monospace;
-  font-size: 13px;
+  font-size: 11px;
   color: var(--amber);
   letter-spacing: 2px;
   margin-bottom: 6px;
 }
 
 .chapter-card .me-title {
-  font-size: 15px;
+  font-size: 13px;
   color: var(--text);
   font-weight: 500;
   line-height: 1.3;
@@ -332,7 +267,7 @@ body::before {
 .chapter-card .me-count {
   margin-top: 8px;
   font-family: 'Share Tech Mono', monospace;
-  font-size: 12px;
+  font-size: 10px;
   color: var(--text-dim);
 }
 
@@ -391,7 +326,7 @@ body::before {
   align-items: center;
   gap: 8px;
   font-family: 'Share Tech Mono', monospace;
-  font-size: 13px;
+  font-size: 11px;
   color: var(--text-dim);
   cursor: pointer;
   margin-bottom: 16px;
@@ -413,7 +348,7 @@ body::before {
   background: var(--warning-bg);
   border: 1px solid var(--amber-dim);
   font-family: 'Share Tech Mono', monospace;
-  font-size: 12px;
+  font-size: 10px;
   color: var(--amber);
   padding: 4px 8px;
   letter-spacing: 2px;
@@ -423,7 +358,7 @@ body::before {
 
 .detail-title {
   font-family: 'Rajdhani', sans-serif;
-  font-size: 24px;
+  font-size: 22px;
   font-weight: 700;
   color: var(--text-bright);
   letter-spacing: 2px;
@@ -432,7 +367,7 @@ body::before {
 }
 
 .detail-sub {
-  font-size: 13px;
+  font-size: 12px;
   color: var(--text-dim);
   font-family: 'Share Tech Mono', monospace;
   margin-top: 4px;
@@ -464,9 +399,9 @@ body::before {
 
 .alert-name {
   font-family: 'Share Tech Mono', monospace;
-  font-size: 15px;
-  color: var(--amber);
-  letter-spacing: 1.5px;
+  font-size:15px;
+  color:var(--amber);
+  letter-spacing:1.5px;
   flex: 1;
 }
 
@@ -495,7 +430,7 @@ body::before {
 
 .info-section-label {
   font-family: 'Share Tech Mono', monospace;
-  font-size: 11px;
+  font-size: 9px;
   letter-spacing: 3px;
   text-transform: uppercase;
   color: var(--blue);
@@ -513,10 +448,10 @@ body::before {
 }
 
 .fcom-box {
-  background: var(--caution-bg);
-  border-left: 3px solid var(--blue-dim);
-  padding: 10px 12px;
-  font-size: 14px;
+  background:var(--caution-bg);
+  border-left:3px solid var(--blue-dim);
+  padding:10px 12px;
+  font-size:14px;
   color: var(--text);
   line-height: 1.7;
   font-family: 'Noto Sans TC', sans-serif;
@@ -526,13 +461,13 @@ body::before {
   width: 100%;
   border-collapse: collapse;
   font-family: 'Share Tech Mono', monospace;
-  font-size: 13px;
+  font-size: 11px;
 }
 
 .cb-table th {
   background: rgba(245,166,35,0.08);
   color: var(--amber);
-  font-size: 11px;
+  font-size: 9px;
   letter-spacing: 2px;
   text-align: left;
   padding: 6px 10px;
@@ -566,10 +501,10 @@ body::before {
   background: rgba(57,211,83,0.05);
   border-left: 3px solid var(--green-dim);
   padding: 10px 12px;
-  font-size: 13px;
-  color: var(--text);
-  line-height: 1.7;
-  font-family: 'Share Tech Mono', monospace;
+  font-size:13px;
+  color:var(--text);
+  line-height:1.7;
+  font-family:'Share Tech Mono', monospace;
   letter-spacing: 0.3px;
 }
 
@@ -577,10 +512,10 @@ body::before {
   background: rgba(224,82,82,0.05);
   border-left: 3px solid var(--red);
   padding: 10px 12px;
-  font-size: 13px;
-  color: var(--text);
-  line-height: 1.7;
-  font-family: 'Noto Sans TC', sans-serif;
+  font-size:13px;
+  color:var(--text);
+  line-height:1.7;
+  font-family:'Noto Sans TC', sans-serif;
 }
 
 .reset-box {
@@ -590,10 +525,10 @@ body::before {
   border-right: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
   padding: 10px 12px;
-  font-size: 13px;
-  color: var(--text);
-  line-height: 1.9;
-  font-family: 'Share Tech Mono', monospace;
+  font-size:13px;
+  color:var(--text);
+  line-height:1.9;
+  font-family:'Share Tech Mono', monospace;
   letter-spacing: 0.5px;
 }
 
@@ -608,15 +543,14 @@ body::before {
   bottom: 0; left: 0; right: 0;
   background: var(--panel);
   border-top: 1px solid var(--border);
-  padding: 5px 20px;
+  padding: 4px 20px;
   display: flex;
   gap: 20px;
   font-family: 'Share Tech Mono', monospace;
-  font-size: 12px;
+  font-size: 10px;
   color: var(--text-dim);
   letter-spacing: 1px;
   z-index: 100;
-  flex-wrap: wrap;
 }
 
 .status-item { display: flex; align-items: center; gap: 6px; }
@@ -643,7 +577,18 @@ body::before {
   gap: 10px;
 }
 .search-result-item:hover { background: var(--panel2); }
-
+.search-result-item .res-name {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 12px;
+  color: var(--amber);
+  letter-spacing: 1px;
+}
+.search-result-item .res-chapter {
+  font-size: 11px;
+  color: var(--text-dim);
+  margin-top: 2px;
+  font-family: 'Noto Sans TC', sans-serif;
+}
 .res-badge {
   font-family: 'Share Tech Mono', monospace;
   font-size: 9px;
@@ -662,7 +607,7 @@ body::before {
 .water-table {
   border-collapse: collapse;
   font-family: 'Share Tech Mono', monospace;
-  font-size: 13px;
+  font-size: 12px;
 }
 .water-table td { padding: 6px 16px; border: 1px solid var(--border); }
 .water-table td:first-child { color: var(--amber); }
@@ -670,200 +615,6 @@ body::before {
 
 /* HIGHLIGHT */
 .highlight { color: var(--amber); font-weight: 600; }
-
-/* MEL SECTION */
-.mel-section {
-  margin-top: 14px;
-  border: 1px solid var(--mel-border);
-  background: var(--mel-bg);
-}
-
-.mel-section-title {
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 11px;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: var(--blue);
-  padding: 8px 12px;
-  background: rgba(77,184,255,0.08);
-  border-bottom: 1px solid var(--mel-border);
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.mel-section-title::after {
-  content: '';
-  flex: 1;
-  height: 1px;
-  background: var(--mel-border);
-}
-
-.mel-entries-box {
-  padding: 10px 12px;
-  border-bottom: 1px solid var(--mel-border);
-}
-
-.mel-entries-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 8px;
-  font-size: 13px;
-  color: var(--text);
-  font-family: 'Noto Sans TC', sans-serif;
-}
-
-.mel-entries-col-header {
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 10px;
-  letter-spacing: 2px;
-  color: var(--amber);
-  text-transform: uppercase;
-  padding-bottom: 4px;
-  border-bottom: 1px solid var(--mel-border);
-  margin-bottom: 6px;
-}
-
-.mel-entries-val {
-  font-size: 13px;
-  color: var(--text);
-  font-family: 'Noto Sans TC', sans-serif;
-  line-height: 1.6;
-}
-
-.mel-entries-val .mel-ref {
-  color: var(--blue);
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 12px;
-  font-weight: 600;
-}
-
-.mel-item-box {
-  padding: 12px;
-}
-
-.mel-item-header {
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 14px;
-  color: var(--amber);
-  letter-spacing: 1px;
-  font-weight: 700;
-  margin-bottom: 4px;
-}
-
-.mel-item-ident {
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 10px;
-  color: var(--text-dim);
-  margin-bottom: 10px;
-}
-
-.mel-sub-item {
-  border: 1px solid var(--mel-border);
-  margin-bottom: 10px;
-  background: var(--panel);
-}
-
-.mel-sub-item-header {
-  background: rgba(245,166,35,0.07);
-  padding: 6px 10px;
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 12px;
-  color: var(--amber);
-  letter-spacing: 1px;
-  border-bottom: 1px solid var(--mel-border);
-}
-
-.mel-dispatch-table {
-  width: 100%;
-  border-collapse: collapse;
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 12px;
-  margin-bottom: 8px;
-}
-
-.mel-dispatch-table th {
-  background: rgba(77,184,255,0.05);
-  color: var(--blue);
-  font-size: 10px;
-  letter-spacing: 1.5px;
-  text-align: center;
-  padding: 5px 8px;
-  border: 1px solid var(--mel-border);
-  text-transform: uppercase;
-}
-
-.mel-dispatch-table td {
-  text-align: center;
-  padding: 5px 8px;
-  border: 1px solid var(--mel-border);
-  color: var(--text-bright);
-}
-
-.mel-dispatch-table td.interval { color: var(--amber); font-weight: 700; font-size: 14px; }
-
-.mel-conditions {
-  padding: 8px 10px;
-  font-size: 13px;
-  color: var(--text);
-  font-family: 'Noto Sans TC', sans-serif;
-  line-height: 1.8;
-}
-
-.mel-conditions .cond-item {
-  margin-bottom: 4px;
-  padding-left: 4px;
-}
-
-.mel-conditions .cond-item strong {
-  color: var(--amber);
-}
-
-.mel-conditions .alert-ref {
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 12px;
-  color: var(--red);
-  background: rgba(224,82,82,0.08);
-  padding: 1px 5px;
-}
-
-.mel-note {
-  font-family: 'Noto Sans TC', sans-serif;
-  font-size: 12px;
-  color: var(--amber);
-  background: rgba(245,166,35,0.06);
-  border-left: 3px solid var(--amber-dim);
-  padding: 5px 10px;
-  margin-top: 6px;
-}
-
-.mel-ref-line {
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 11px;
-  color: var(--text-dim);
-  padding: 4px 10px;
-  border-top: 1px solid var(--mel-border);
-  background: rgba(0,0,0,0.1);
-}
-
-.mel-ref-line span { color: var(--blue); }
-
-/* DAY MODE TOGGLE */
-.day-toggle {
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 11px;
-  background: rgba(77,184,255,0.1);
-  border: 1px solid var(--border-bright);
-  color: var(--blue);
-  padding: 5px 12px;
-  cursor: pointer;
-  letter-spacing: 1px;
-  transition: all 0.2s;
-  white-space: nowrap;
-  margin-left: auto;
-}
-.day-toggle:hover { background: rgba(77,184,255,0.2); border-color: var(--blue); }
-body.day-mode .day-toggle { background: rgba(26,106,184,0.1); border-color: var(--blue); color: var(--blue); }
 
 /* Scrollbar */
 ::-webkit-scrollbar { width: 4px; }
@@ -873,7 +624,7 @@ body.day-mode .day-toggle { background: rgba(26,106,184,0.1); border-color: var(
 
 .no-cb {
   font-family: 'Share Tech Mono', monospace;
-  font-size: 13px;
+  font-size: 11px;
   color: var(--text-dim);
   font-style: italic;
   padding: 6px 0;
@@ -885,7 +636,7 @@ body.day-mode .day-toggle { background: rgba(26,106,184,0.1); border-color: var(
   border: 1px solid var(--red);
   color: var(--red);
   font-family: 'Share Tech Mono', monospace;
-  font-size: 10px;
+  font-size: 9px;
   padding: 2px 6px;
   letter-spacing: 1px;
   margin-right: 4px;
@@ -895,24 +646,34 @@ body.day-mode .day-toggle { background: rgba(26,106,184,0.1); border-color: var(
   padding: 40px;
   text-align: center;
   font-family: 'Share Tech Mono', monospace;
-  font-size: 14px;
+  font-size: 12px;
   color: var(--text-dim);
   letter-spacing: 2px;
 }
 
-/* Search result items bigger */
-.search-result-item .res-name {
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 14px;
-  color: var(--amber);
-  letter-spacing: 1px;
-}
-.search-result-item .res-chapter {
-  font-size: 12px;
-  color: var(--text-dim);
-  margin-top: 2px;
-  font-family: 'Noto Sans TC', sans-serif;
-}
+.mel-section{margin-top:14px;border:1px solid var(--mel-border);background:var(--mel-bg);}
+.mel-section-title{font-family:'Share Tech Mono',monospace;font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--blue);padding:8px 12px;background:rgba(77,184,255,0.08);border-bottom:1px solid var(--mel-border);display:flex;align-items:center;gap:8px;}
+.mel-section-title::after{content:'';flex:1;height:1px;background:var(--mel-border);}
+.mel-entries-box{padding:10px 12px;border-bottom:1px solid var(--mel-border);}
+.mel-entries-row{display:grid;grid-template-columns:1fr 1fr;gap:8px;}
+.mel-entries-col-header{font-family:'Share Tech Mono',monospace;font-size:10px;letter-spacing:2px;color:var(--amber);text-transform:uppercase;padding-bottom:4px;border-bottom:1px solid var(--mel-border);margin-bottom:6px;}
+.mel-entries-val{font-size:13px;color:var(--text);font-family:'Noto Sans TC',sans-serif;line-height:1.6;}
+.mel-item-box{padding:10px 12px;}
+.mel-item-header{font-family:'Share Tech Mono',monospace;font-size:14px;color:var(--amber);letter-spacing:1px;font-weight:700;margin-bottom:3px;}
+.mel-item-ident{font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--text-dim);margin-bottom:10px;}
+.mel-sub-item{border:1px solid var(--mel-border);margin-bottom:10px;background:var(--panel);}
+.mel-sub-item-header{background:rgba(245,166,35,0.07);padding:6px 10px;font-family:'Share Tech Mono',monospace;font-size:12px;color:var(--amber);letter-spacing:1px;border-bottom:1px solid var(--mel-border);}
+.mel-dispatch-table{width:100%;border-collapse:collapse;font-family:'Share Tech Mono',monospace;font-size:12px;margin-bottom:8px;}
+.mel-dispatch-table th{background:rgba(77,184,255,0.05);color:var(--blue);font-size:10px;letter-spacing:1.5px;text-align:center;padding:5px 8px;border:1px solid var(--mel-border);text-transform:uppercase;}
+.mel-dispatch-table td{text-align:center;padding:5px 8px;border:1px solid var(--mel-border);color:var(--text-bright);}
+.mel-dispatch-table td.interval{color:var(--amber);font-weight:700;font-size:15px;}
+.mel-conditions{padding:8px 10px;font-size:13px;color:var(--text);font-family:'Noto Sans TC',sans-serif;line-height:1.8;}
+.mel-conditions .cond-item{display:block;margin-bottom:3px;}
+.mel-note{font-size:12px;color:var(--amber);background:rgba(245,166,35,0.06);border-left:3px solid var(--amber-dim);padding:5px 10px;margin-top:6px;}
+.mel-ref-line{font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--text-dim);padding:4px 10px;border-top:1px solid var(--mel-border);background:rgba(0,0,0,0.1);}
+.mel-ref-line span{color:var(--blue);}
+.day-toggle{font-family:'Share Tech Mono',monospace;font-size:11px;background:rgba(77,184,255,0.1);border:1px solid var(--border-bright);color:var(--blue);padding:5px 12px;cursor:pointer;letter-spacing:1px;transition:all 0.2s;white-space:nowrap;margin-left:auto;}
+.day-toggle:hover{background:rgba(77,184,255,0.2);border-color:var(--blue);}
 </style>
 </head>
 <body>
@@ -977,137 +738,497 @@ const chapters = [
 
 const alerts = [
   // ME-21 Air Conditioning
-  { id:"air_cond_ctl",     chapter:"ME-21", name:"AIR COND CTL 1(2)-A(B) FAULT",     fcom:"This alert triggers when the lane A(B) of ACSC 1(2) is failed.", cb:[{panel:"49VU",des:"AIR COND/TEMP CTL/SYS 1 CHAN B/28VDC",fin:"52HH",loc:"D08"},{panel:"122VU",des:"AIR COND/TEMP CTL SYS 1/CHAN A/115VAC",fin:"49HH",loc:"X22"},{panel:"122VU",des:"AIR COND/TEMP CTL SYS 1/CHAN A/28VDC",fin:"51HH",loc:"X21"},{panel:"122VU",des:"AIR COND/TEMP CTL SYS 1/CHAN B/115VAC",fin:"50HH",loc:"Y18"},{panel:"122VU",des:"AIR COND/TEMP CTL SYS 2/CHAN A/115VAC",fin:"53HH",loc:"W22"},{panel:"122VU",des:"AIR COND/TEMP CTL SYS 2/CHAN A/28VDC",fin:"55HH",loc:"W21"},{panel:"122VU",des:"AIR COND/TEMP CTL SYS 2/CHAN B/28VDC",fin:"56HH",loc:"Y21"},{panel:"122VU",des:"AIR COND/TEMP CTL SYS 2/CHAN B/115VAC",fin:"54HH",loc:"Y20"}], test:"TASK 21-61-00-710-001-A Operational Test of the Pack Temperature-Control System" },
-  { id:"air_pack_fault",   chapter:"ME-21", name:"AIR PACK 1(2) FAULT",              fcom:"This alert triggers when: - The position of pack flow control valve disagrees with the commanded position, or - The pack valve is closed.", cb:[{panel:"49VU",des:"AIR COND/TEMP CTL/SYS 1 CHAN B/28VDC",fin:"52HH",loc:"D08"},{panel:"122VU",des:"AIR COND/TEMP CTL SYS 1/CHAN A/115VAC",fin:"49HH",loc:"X22"},{panel:"122VU",des:"AIR COND/TEMP CTL SYS 2/CHAN A/115VAC",fin:"53HH",loc:"W22"},{panel:"122VU",des:"AIR COND/TEMP CTL SYS 2/CHAN B/115VAC",fin:"54HH",loc:"Y20"}], test:"TASK 21-61-00-710-001-A Operational Test of the Pack Temperature-Control System\nTASK 21-51-00-710-002-A Operational Test of the Flow Control and Indicating System",
+  { id:"air_cond_ctl",     chapter:"ME-21", name:"AIR COND CTL 1(2)-A(B) FAULT",     fcom:"This alert triggers when the lane A(B) of ACSC 1(2) is failed.", cb:[{panel:"49VU",des:"AIR COND/TEMP CTL/SYS 1 CHAN B/28VDC",fin:"52HH",loc:"D08"},{panel:"122VU",des:"AIR COND/TEMP CTL SYS 1/CHAN A/115VAC",fin:"49HH",loc:"X22"},{panel:"122VU",des:"AIR COND/TEMP CTL SYS 1/CHAN A/28VDC",fin:"51HH",loc:"X21"},{panel:"122VU",des:"AIR COND/TEMP CTL SYS 1/CHAN B/115VAC",fin:"50HH",loc:"Y18"},{panel:"122VU",des:"AIR COND/TEMP CTL SYS 2/CHAN A/115VAC",fin:"53HH",loc:"W22"},{panel:"122VU",des:"AIR COND/TEMP CTL SYS 2/CHAN A/28VDC",fin:"55HH",loc:"W21"},{panel:"122VU",des:"AIR COND/TEMP CTL SYS 2/CHAN B/28VDC",fin:"56HH",loc:"Y21"},{panel:"122VU",des:"AIR COND/TEMP CTL SYS 2/CHAN B/115VAC",fin:"54HH",loc:"Y20"}], test:"TASK 21-61-00-710-001-A Operational Test of the Pack Temperature-Control System" ,
+    mel: {
+      aircraftStatus: "NIL",
+      conditionOfDispatch: "Refer to Item 21-63-04 Air Conditioning System Controller Channel",
+      itemRef: "21-63-04", itemTitle: "Air Conditioning System Controller Channel (COND CTL 1(2)-A(B))",
+      ident: "MI-21-63-00007511.0001001 / 05 MAR 25", applicable: "ALL",
+      items: [
+        {
+          code: "21-63-04A", title: "Non EDTO flight",
+          interval: "C", nbrInstalled: "4", nbrRequired: "2", placard: "No",
+          conditions: `<span class="cond-item">One may be inoperative on each side provided that EDTO is not conducted.</span>`,
+          note: "Notify Dispatch.", refs: []
+        },
+        {
+          code: "21-63-04B", title: "EDTO flight",
+          interval: "C", nbrInstalled: "4", nbrRequired: "4", placard: "No",
+          conditions: `<span class="cond-item">All must be operative for EDTO flights.</span>`,
+          note: "", refs: []
+        }
+      ]
+    }
+  },
+  { id:"air_pack_fault",   chapter:"ME-21", name:"AIR PACK 1(2) FAULT",              fcom:"This alert triggers when: - The position of pack flow control valve disagrees with the commanded position, or - The pack valve is closed.", cb:[{panel:"49VU",des:"AIR COND/TEMP CTL/SYS 1 CHAN B/28VDC",fin:"52HH",loc:"D08"},{panel:"122VU",des:"AIR COND/TEMP CTL SYS 1/CHAN A/115VAC",fin:"49HH",loc:"X22"},{panel:"122VU",des:"AIR COND/TEMP CTL SYS 2/CHAN A/115VAC",fin:"53HH",loc:"W22"},{panel:"122VU",des:"AIR COND/TEMP CTL SYS 2/CHAN B/115VAC",fin:"54HH",loc:"Y20"}], test:"TASK 21-61-00-710-001-A Operational Test of the Pack Temperature-Control System\nTASK 21-51-00-710-002-A Operational Test of the Flow Control and Indicating System" ,
     mel: {
       aircraftStatus: "NIL",
       conditionOfDispatch: "Refer to Item 21-52-01 Air Conditioning Pack",
-      itemRef: "21-52-01",
-      itemTitle: "Air Conditioning Pack",
-      ident: "MI-21-52-00007502.0010001 / 25 FEB 26",
-      applicable: "ALL",
+      itemRef: "21-52-01", itemTitle: "Air Conditioning Pack",
+      ident: "MI-21-52-00007502.0010001 / 25 FEB 26", applicable: "ALL",
       items: [
         {
-          code: "21-52-01D",
-          title: "With speedbrakes available",
-          interval: "C",
-          nbrInstalled: "2",
-          nbrRequired: "1",
-          placard: "Yes",
-          conditions: `<span class="cond-item"><strong>(o)(m)</strong> One may be inoperative provided that:</span>
+          code: "21-52-01D", title: "With speedbrakes available",
+          interval: "C", nbrInstalled: "2", nbrRequired: "1", placard: "Yes",
+          conditions: `<span class="cond-item">(o)(m) One may be inoperative provided that:</span>
 <span class="cond-item"><strong>1)</strong> EDTO is not conducted, and</span>
-<span class="cond-item"><strong>2)</strong> The following alerts:<br>&nbsp;&nbsp;&nbsp;<span class="alert-ref">AIR PACK 1(2) REGUL FAULT</span><br>&nbsp;&nbsp;&nbsp;<span class="alert-ref">AIR COND CTL 1(2)-A FAULT</span><br>&nbsp;&nbsp;&nbsp;<span class="alert-ref">AIR COND CTL 1(2)-B FAULT</span><br>&nbsp;&nbsp;&nbsp;associated with the operative pack are not displayed on the EWD, and</span>
+<span class="cond-item"><strong>2)</strong> AIR PACK 1(2) REGUL FAULT / AIR COND CTL 1(2)-A(B) FAULT for operative pack not on EWD, and</span>
 <span class="cond-item"><strong>3)</strong> The affected PACK 1(2) pb-sw is set to OFF, and</span>
 <span class="cond-item"><strong>4)</strong> The speedbrakes are operative, and</span>
 <span class="cond-item"><strong>5)</strong> The associated pack flow control valve is secured in the closed position.</span>`,
-          note: "Notify Dispatch.",
-          refs: [
-            { type: "o", text: "Refer to OpsProc 21-52-01D Air Conditioning Pack (One Air Conditioning Pack Inoperative)" },
-            { type: "m", text: "Refer to AMM Task 21-51-00-040-002" }
-          ]
+          note: "Notify Dispatch.", refs: [{ type: "o", text: "Refer to OpsProc 21-52-01D Air Conditioning Pack" }, { type: "m", text: "Refer to AMM Task 21-51-00-040-002" }]
         },
         {
-          code: "21-52-01E",
-          title: "Limitation to 31 500 ft",
-          interval: "C",
-          nbrInstalled: "2",
-          nbrRequired: "1",
-          placard: "Yes",
-          conditions: `<span class="cond-item"><strong>(o)(m)</strong> One may be inoperative provided that:</span>
+          code: "21-52-01E", title: "Limitation to 31 500 ft",
+          interval: "C", nbrInstalled: "2", nbrRequired: "1", placard: "Yes",
+          conditions: `<span class="cond-item">(o)(m) One may be inoperative provided that:</span>
 <span class="cond-item"><strong>1)</strong> EDTO is not conducted, and</span>
 <span class="cond-item"><strong>2)</strong> The flight altitude is limited to 31 500 ft (9 600 m), and</span>
-<span class="cond-item"><strong>3)</strong> The following alerts:<br>&nbsp;&nbsp;&nbsp;<span class="alert-ref">AIR PACK 1(2) REGUL FAULT</span><br>&nbsp;&nbsp;&nbsp;<span class="alert-ref">AIR COND CTL 1(2)-A FAULT</span><br>&nbsp;&nbsp;&nbsp;<span class="alert-ref">AIR COND CTL 1(2)-B FAULT</span><br>&nbsp;&nbsp;&nbsp;associated with the operative pack are not displayed on the EWD, and</span>
+<span class="cond-item"><strong>3)</strong> AIR PACK 1(2) REGUL FAULT / AIR COND CTL 1(2)-A(B) FAULT for operative pack not on EWD, and</span>
 <span class="cond-item"><strong>4)</strong> The affected PACK 1(2) pb-sw is set to OFF, and</span>
 <span class="cond-item"><strong>5)</strong> The associated pack flow control valve is secured in the closed position.</span>`,
-          note: "Notify Dispatch.",
-          refs: [
-            { type: "o", text: "Refer to OpsProc 21-52-01E Air Conditioning Pack (One Air Conditioning Pack Inoperative)" },
-            { type: "m", text: "Refer to AMM Task 21-51-00-040-002" }
-          ]
+          note: "Notify Dispatch.", refs: [{ type: "o", text: "Refer to OpsProc 21-52-01E Air Conditioning Pack" }, { type: "m", text: "Refer to AMM Task 21-51-00-040-002" }]
         },
         {
-          code: "21-52-01G",
-          title: "Air cycle machine failed",
-          interval: "C",
-          nbrInstalled: "2",
-          nbrRequired: "1",
-          placard: "No",
-          conditions: `<span class="cond-item"><strong>(o)</strong> One may be operated on heat exchanger cooling only (air cycle machine failure) provided that:</span>
-<span class="cond-item"><strong>1)</strong> The following alerts:<br>&nbsp;&nbsp;&nbsp;<span class="alert-ref">AIR COND CTL 1(2)-A FAULT</span><br>&nbsp;&nbsp;&nbsp;<span class="alert-ref">AIR COND CTL 1(2)-B FAULT</span><br>&nbsp;&nbsp;&nbsp;associated with the operative pack are not displayed on the EWD, and</span>
+          code: "21-52-01G", title: "Air cycle machine failed",
+          interval: "C", nbrInstalled: "2", nbrRequired: "1", placard: "No",
+          conditions: `<span class="cond-item">(o) One may be operated on heat exchanger cooling only provided that:</span>
+<span class="cond-item"><strong>1)</strong> AIR COND CTL 1(2)-A FAULT and AIR COND CTL 1(2)-B FAULT for operative pack not on EWD, and</span>
 <span class="cond-item"><strong>2)</strong> The affected pack outlet temperature indication is operative on the BLEED SD page.</span>`,
-          note: "",
-          refs: [
-            { type: "o", text: "Refer to OpsProc 21-52-01G Air Conditioning Pack (One Air Conditioning Pack in Heat Exchanger Cooling Mode only)" }
-          ]
+          note: "", refs: [{ type: "o", text: "Refer to OpsProc 21-52-01G Air Conditioning Pack (Heat Exchanger Cooling Mode only)" }]
         },
         {
-          code: "21-52-01H",
-          title: "Non pressurized flight",
-          interval: "A",
-          nbrInstalled: "2",
-          nbrRequired: "0",
-          placard: "No",
-          conditions: `<span class="cond-item"><strong>Both may be inoperative provided that:</strong></span>
+          code: "21-52-01H", title: "Non pressurized flight",
+          interval: "A", nbrInstalled: "2", nbrRequired: "0", placard: "No",
+          conditions: `<span class="cond-item">Both may be inoperative provided that:</span>
 <span class="cond-item"><strong>1)</strong> The flight is not pressurized, and</span>
 <span class="cond-item"><strong>2)</strong> The flight is performed with no passengers on board, and</span>
-<span class="cond-item"><strong>3)</strong> The flight is conducted unpressurized for ferry to where repair can be made only, and</span>
-<span class="cond-item"><strong>4)</strong> If necessary, associated operational procedures of ferry flight refer to FOM Chapter 9 and Refer to FCOM/PRO-NOR-SUP-MISC-B Flight Without Cabin Pressurization.</span>`,
-          note: "Flight dispatch from TAIWAN is not allowed except for ferry to where repair can be made.",
-          refs: []
+<span class="cond-item"><strong>3)</strong> The flight is conducted unpressurized for ferry to where repair can be made only.</span>`,
+          note: "Flight dispatch from TAIWAN is not allowed except for ferry to where repair can be made.", refs: []
         }
       ]
     }
   },
-  { id:"air_pack12_fault", chapter:"ME-21", name:"AIR PACK 1+2 FAULT",               fcom:"This alert triggers when both ACSC are failed.", cb:[{panel:"49VU",des:"AIR COND/TEMP CTL/SYS 1 CHAN B/28VDC",fin:"52HH",loc:"D08"},{panel:"122VU",des:"AIR COND/TEMP CTL SYS 1/CHAN A/115VAC",fin:"49HH",loc:"X22"},{panel:"122VU",des:"AIR COND/TEMP CTL SYS 2/CHAN A/115VAC",fin:"53HH",loc:"W22"}], test:"TASK 21-61-00-710-001-A / TASK 21-51-00-710-002-A",
+  { id:"air_pack12_fault", chapter:"ME-21", name:"AIR PACK 1+2 FAULT",               fcom:"This alert triggers when both ACSC are failed.", cb:[{panel:"49VU",des:"AIR COND/TEMP CTL/SYS 1 CHAN B/28VDC",fin:"52HH",loc:"D08"},{panel:"122VU",des:"AIR COND/TEMP CTL SYS 1/CHAN A/115VAC",fin:"49HH",loc:"X22"},{panel:"122VU",des:"AIR COND/TEMP CTL SYS 2/CHAN A/115VAC",fin:"53HH",loc:"W22"}], test:"TASK 21-61-00-710-001-A / TASK 21-51-00-710-002-A" ,
     mel: {
       aircraftStatus: "NIL",
       conditionOfDispatch: "Refer to Item 21-52-01H Air Conditioning Pack",
-      itemRef: "21-52-01",
-      itemTitle: "Air Conditioning Pack",
-      ident: "MI-21-52-00007502.0010001 / 25 FEB 26",
-      applicable: "ALL",
+      itemRef: "21-52-01", itemTitle: "Air Conditioning Pack",
+      ident: "MI-21-52-00007502.0010001 / 25 FEB 26", applicable: "ALL",
       items: [
         {
-          code: "21-52-01H",
-          title: "Non pressurized flight",
-          interval: "A",
-          nbrInstalled: "2",
-          nbrRequired: "0",
-          placard: "No",
-          conditions: `<span class="cond-item"><strong>Both may be inoperative provided that:</strong></span>
+          code: "21-52-01H", title: "Non pressurized flight",
+          interval: "A", nbrInstalled: "2", nbrRequired: "0", placard: "No",
+          conditions: `<span class="cond-item">Both may be inoperative provided that:</span>
 <span class="cond-item"><strong>1)</strong> The flight is not pressurized, and</span>
 <span class="cond-item"><strong>2)</strong> The flight is performed with no passengers on board, and</span>
-<span class="cond-item"><strong>3)</strong> The flight is conducted unpressurized for ferry to where repair can be made only, and</span>
-<span class="cond-item"><strong>4)</strong> If necessary, associated operational procedures of ferry flight refer to FOM Chapter 9 and Refer to FCOM/PRO-NOR-SUP-MISC-B Flight Without Cabin Pressurization.</span>`,
-          note: "Flight dispatch from TAIWAN is not allowed except for ferry to where repair can be made.",
-          refs: []
+<span class="cond-item"><strong>3)</strong> The flight is conducted unpressurized for ferry to where repair can be made only.</span>`,
+          note: "Flight dispatch from TAIWAN is not allowed except for ferry to where repair can be made.", refs: []
         }
       ]
     }
   },
-  { id:"air_pack_off",     chapter:"ME-21", name:"AIR PACK 1(2) OFF",                fcom:"This alert triggers when the PACK 1(2) pb-sw is set to OFF and no failure is detected.", cb:[{panel:"49VU",des:"AIR COND/TEMP CTL/SYS 1 CHAN B/28VDC",fin:"52HH",loc:"D08"},{panel:"122VU",des:"AIR COND/TEMP CTL SYS 1/CHAN A/115VAC",fin:"49HH",loc:"X22"}], test:"TASK 21-61-00-710-001-A" },
-  { id:"air_pack_ovht",    chapter:"ME-21", name:"AIR PACK 1(2) OVHT",               fcom:"This alert triggers when the pack compressor outlet temperature rises above 260°C.", cb:[{panel:"49VU",des:"AIR COND/TEMP CTL/SYS 1 CHAN B/28VDC",fin:"52HH",loc:"D08"},{panel:"122VU",des:"AIR COND/TEMP CTL SYS 1/CHAN A/115VAC",fin:"49HH",loc:"X22"},{panel:"122VU",des:"AIR COND/TEMP CTL SYS 2/CHAN A/115VAC",fin:"53HH",loc:"W22"}], test:"TASK 21-61-00-710-001-A" },
-  { id:"air_pack_regul",   chapter:"ME-21", name:"AIR PACK 1(2) REGUL FAULT",        fcom:"This alert triggers when the temperature regulation performance is degraded, or an inconsistency is detected between air flow.", cb:[{panel:"49VU",des:"AIR COND/TEMP CTL/SYS 1 CHAN B/28VDC",fin:"52HH",loc:"D08"},{panel:"122VU",des:"AIR COND/TEMP CTL SYS 1/CHAN A/115VAC",fin:"49HH",loc:"X22"},{panel:"122VU",des:"AIR COND/TEMP CTL SYS 2/CHAN A/115VAC",fin:"53HH",loc:"W22"}], test:"TASK 21-61-00-710-001-A", reset:"拉ACSC C/B:\n- 開C/B 55HH & 53HH\n- 開C/B 51HH & 49HH\n- 開C/B 50HH & 56HH\n- 開C/B 52HH\n- 等5秒，依序壓回所有C/B\n注意: Reset期間可能有短暫油門增加" },
-  { id:"cab_pr_sys_fault", chapter:"ME-21", name:"CAB PR SYS 1(2) FAULT",            fcom:"This alert triggers when the cabin pressure controller is failed.", cb:[{panel:"49VU",des:"AIR COND/CAB/PRESS/CTL1",fin:"1HL",loc:"D09"},{panel:"122VU",des:"AIR COND/CAB PRESS/CTL/MAN",fin:"3HL",loc:"Y23"},{panel:"122VU",des:"AIR COND/CAB PRESS/CTL/2",fin:"2HL",loc:"Y22"}], test:"TASK 21-31-00-710-002-A", reset:"CPC 1: 開C/B 1HL，等5秒，壓回\nCPC 2: 開C/B 2HL，等5秒，壓回" },
-  { id:"cab_pr_12_fault",  chapter:"ME-21", name:"CAB PR SYS 1+2 FAULT",             fcom:"This alert triggers when both cabin pressure controllers are failed.", cb:[{panel:"49VU",des:"AIR COND/CAB/PRESS/CTL1",fin:"1HL",loc:"D09"},{panel:"122VU",des:"AIR COND/CAB PRESS/CTL/2",fin:"2HL",loc:"Y22"}], test:"TASK 21-31-00-710-002-A" },
-  { id:"cab_pr_excess",    chapter:"ME-21", name:"CAB PR EXCESS CAB ALT",             fcom:"Triggers when cabin altitude is above 9550ft in cruise, or above higher of 9550ft / 1000ft above airfield pressure altitude in climb/descent.", cb:[], test:"TASK 21-31-00-710-002-A" },
-  { id:"cab_pr_ldg_elev",  chapter:"ME-21", name:"CAB PR LDG ELEV FAULT",             fcom:"Triggers when LDG ELEV selector is AUTO and landing field elevation from FMGC is not available.", cb:[{panel:"49VU",des:"AIR COND/CAB/PRESS/CTL1",fin:"1HL",loc:"D09"},{panel:"121VU",des:"AUTO FLT/FMGC/1",fin:"10CA1",loc:"H08"},{panel:"121VU",des:"AUTO FLT/FMGC/2",fin:"10CA2",loc:"M17"}], test:"TASK 21-31-00-710-002-A / TASK 22-96-00-710-001-A" },
-  { id:"vent_avncs",       chapter:"ME-21", name:"VENT AVNCS SYS FAULT",              fcom:"Triggers when: power up test not satisfactory, AEVC not supplied, or valve position disagree.", cb:[{panel:"49VU",des:"AIR COND/AVNCS VENT/CTL",fin:"5HQ",loc:"D05"},{panel:"49VU",des:"AIR COND/AVNCS VENT/CTL",fin:"6HQ",loc:"D06"},{panel:"122VU",des:"AIR COND/AVNCS/VENT/MONG",fin:"3HQ",loc:"Y17"}], test:"TASK 21-26-00-710-001-A", reset:"拉C/B 122VU Y17（3HQ），等5秒後壓回" },
-  { id:"vent_blower",      chapter:"ME-21", name:"VENT BLOWER FAULT",                 fcom:"This alert triggers when the blowing pressure is low or there is a duct overheat.", cb:[{panel:"122VU",des:"AIR COND/AVNCS/VENT/MONG",fin:"3HQ",loc:"Y17"}], test:"開C/B，等5秒，壓回" },
-  { id:"vent_extract",     chapter:"ME-21", name:"VENT EXTRACT FAULT",                fcom:"This alert triggers when the extract pressure is low.", cb:[{panel:"122VU",des:"AIR COND/AVNCS/VENT/MONG",fin:"3HQ",loc:"Y17"}], test:"開C/B，等5秒，壓回" },
-  { id:"vent_skin",        chapter:"ME-21", name:"VENT SKIN VALVE FAULT",             fcom:"Triggers when extract valve fully open in phase 3, or in flight, or inlet valve not fully closed in flight.", cb:[{panel:"122VU",des:"AIR COND/AVNCS/VENT/MONG",fin:"3HQ",loc:"Y17"}], test:"開C/B，等5秒，壓回" },
-  { id:"cond_trim_air",    chapter:"ME-21", name:"COND TRIM AIR SYS FAULT",           fcom:"Triggers when one trim air valve is failed, or overpressure downstream of the hot air valve.", cb:[{panel:"49VU",des:"AIR COND/TEMP CTL/SYS 1 CHAN B/28VDC",fin:"52HH",loc:"D08"},{panel:"122VU",des:"AIR COND/TEMP CTL SYS 1/CHAN A/115VAC",fin:"49HH",loc:"X22"},{panel:"122VU",des:"AIR COND/TEMP CTL SYS 2/CHAN A/115VAC",fin:"53HH",loc:"W22"}], test:"TASK 21-63-00-710-004-A", reset:"依序開C/B: 55HH→53HH→51HH→49HH→50HH→56HH→52HH\n等5秒後壓回所有C/B" },
-  { id:"aft_crg_heat",     chapter:"ME-21", name:"COND AFT CRG HEAT FAULT",           fcom:"Triggers if the heating controller of the FWD(AFT) cargo compartment is failed.", cb:[{panel:"49VU",des:"AIR COND/AFT CARGO/VENT & HTG/CTL & MONG",fin:"31HN",loc:"C07"}], test:"TASK 21-43-00-740-002-A" },
+  { id:"air_pack_off",     chapter:"ME-21", name:"AIR PACK 1(2) OFF",                fcom:"This alert triggers when the PACK 1(2) pb-sw is set to OFF and no failure is detected.", cb:[{panel:"49VU",des:"AIR COND/TEMP CTL/SYS 1 CHAN B/28VDC",fin:"52HH",loc:"D08"},{panel:"122VU",des:"AIR COND/TEMP CTL SYS 1/CHAN A/115VAC",fin:"49HH",loc:"X22"}], test:"TASK 21-61-00-710-001-A" ,
+    mel: {
+      aircraftStatus: "NIL",
+      conditionOfDispatch: "Refer to Item 21-52-01 Air Conditioning Pack",
+      itemRef: "21-52-01", itemTitle: "Air Conditioning Pack",
+      ident: "MI-21-52-00007502.0010001 / 25 FEB 26", applicable: "ALL",
+      items: [
+        {
+          code: "21-52-01D", title: "With speedbrakes available",
+          interval: "C", nbrInstalled: "2", nbrRequired: "1", placard: "Yes",
+          conditions: `<span class="cond-item">(o)(m) One may be inoperative provided that:</span>
+<span class="cond-item"><strong>1)</strong> EDTO is not conducted, and</span>
+<span class="cond-item"><strong>2)</strong> AIR PACK 1(2) REGUL FAULT / AIR COND CTL 1(2)-A(B) FAULT for operative pack not on EWD, and</span>
+<span class="cond-item"><strong>3)</strong> The affected PACK 1(2) pb-sw is set to OFF, and</span>
+<span class="cond-item"><strong>4)</strong> The speedbrakes are operative, and</span>
+<span class="cond-item"><strong>5)</strong> The associated pack flow control valve is secured in the closed position.</span>`,
+          note: "Notify Dispatch.", refs: [{ type: "o", text: "Refer to OpsProc 21-52-01D Air Conditioning Pack" }, { type: "m", text: "Refer to AMM Task 21-51-00-040-002" }]
+        }
+      ]
+    }
+  },
+  { id:"air_pack_ovht",    chapter:"ME-21", name:"AIR PACK 1(2) OVHT",               fcom:"This alert triggers when the pack compressor outlet temperature rises above 260°C.", cb:[{panel:"49VU",des:"AIR COND/TEMP CTL/SYS 1 CHAN B/28VDC",fin:"52HH",loc:"D08"},{panel:"122VU",des:"AIR COND/TEMP CTL SYS 1/CHAN A/115VAC",fin:"49HH",loc:"X22"},{panel:"122VU",des:"AIR COND/TEMP CTL SYS 2/CHAN A/115VAC",fin:"53HH",loc:"W22"}], test:"TASK 21-61-00-710-001-A" ,
+    mel: {
+      aircraftStatus: "NIL",
+      conditionOfDispatch: "Refer to Item 21-52-01 Air Conditioning Pack",
+      itemRef: "21-52-01", itemTitle: "Air Conditioning Pack",
+      ident: "MI-21-52-00007502.0010001 / 25 FEB 26", applicable: "ALL",
+      items: [
+        {
+          code: "21-52-01D", title: "With speedbrakes available",
+          interval: "C", nbrInstalled: "2", nbrRequired: "1", placard: "Yes",
+          conditions: `<span class="cond-item">(o)(m) One may be inoperative provided that:</span>
+<span class="cond-item"><strong>1)</strong> EDTO is not conducted, and</span>
+<span class="cond-item"><strong>2)</strong> AIR PACK 1(2) REGUL FAULT / AIR COND CTL 1(2)-A(B) FAULT for operative pack not on EWD, and</span>
+<span class="cond-item"><strong>3)</strong> The affected PACK 1(2) pb-sw is set to OFF, and</span>
+<span class="cond-item"><strong>4)</strong> The speedbrakes are operative, and</span>
+<span class="cond-item"><strong>5)</strong> The associated pack flow control valve is secured in the closed position.</span>`,
+          note: "Notify Dispatch.", refs: [{ type: "o", text: "Refer to OpsProc 21-52-01D Air Conditioning Pack" }, { type: "m", text: "Refer to AMM Task 21-51-00-040-002" }]
+        }
+      ]
+    }
+  },
+  { id:"air_pack_regul",   chapter:"ME-21", name:"AIR PACK 1(2) REGUL FAULT",        fcom:"This alert triggers when the temperature regulation performance is degraded, or an inconsistency is detected between air flow.", cb:[{panel:"49VU",des:"AIR COND/TEMP CTL/SYS 1 CHAN B/28VDC",fin:"52HH",loc:"D08"},{panel:"122VU",des:"AIR COND/TEMP CTL SYS 1/CHAN A/115VAC",fin:"49HH",loc:"X22"},{panel:"122VU",des:"AIR COND/TEMP CTL SYS 2/CHAN A/115VAC",fin:"53HH",loc:"W22"}], test:"TASK 21-61-00-710-001-A", reset:"拉ACSC C/B:\n- 開C/B 55HH & 53HH\n- 開C/B 51HH & 49HH\n- 開C/B 50HH & 56HH\n- 開C/B 52HH\n- 等5秒，依序壓回所有C/B\n注意: Reset期間可能有短暫油門增加" ,
+    mel: {
+      aircraftStatus: "If pack outlet temperature is affected",
+      conditionOfDispatch: "Refer to Item 21-07-01-01 Pack Outlet Temperature Indication",
+      itemRef: "21-07-01-01", itemTitle: "Pack Outlet Temperature Indication",
+      ident: "MI-21-07-01-00007464.0001001 / 30 JUL 21", applicable: "ALL",
+      items: [
+        {
+          code: "21-07-01-01A", title: "Pack outlet temperature indication inoperative",
+          interval: "C", nbrInstalled: "2", nbrRequired: "1", placard: "No",
+          conditions: `<span class="cond-item">(o) One may be inoperative provided that the associated pack is considered in a degraded regulation mode.</span>`,
+          note: "", refs: []
+        }
+      ]
+    }
+  },
+  { id:"cab_pr_sys_fault", chapter:"ME-21", name:"CAB PR SYS 1(2) FAULT",            fcom:"This alert triggers when the cabin pressure controller is failed.", cb:[{panel:"49VU",des:"AIR COND/CAB/PRESS/CTL1",fin:"1HL",loc:"D09"},{panel:"122VU",des:"AIR COND/CAB PRESS/CTL/MAN",fin:"3HL",loc:"Y23"},{panel:"122VU",des:"AIR COND/CAB PRESS/CTL/2",fin:"2HL",loc:"Y22"}], test:"TASK 21-31-00-710-002-A", reset:"CPC 1: 開C/B 1HL，等5秒，壓回\nCPC 2: 開C/B 2HL，等5秒，壓回" ,
+    mel: {
+      aircraftStatus: "NIL",
+      conditionOfDispatch: "Refer to Item 21-31-01 Automatic Cabin Pressure Control System",
+      itemRef: "21-31-01", itemTitle: "Automatic Cabin Pressure Control System (CPC)",
+      ident: "MI-21-31-00007492.0001001 / 05 MAR 25", applicable: "ALL",
+      items: [
+        {
+          code: "21-31-01A", title: "Automatic CPC 1 inoperative",
+          interval: "C", nbrInstalled: "2", nbrRequired: "1", placard: "No",
+          conditions: `<span class="cond-item">(o) Automatic cabin pressure control system 1 may be inoperative provided that:</span>
+<span class="cond-item"><strong>1)</strong> EDTO is not conducted, and</span>
+<span class="cond-item"><strong>2)</strong> It is deactivated, and</span>
+<span class="cond-item"><strong>3)</strong> The other CPC system is operative.</span>`,
+          note: "", refs: [{ type: "o", text: "Refer to OpsProc 21-31-01A Automatic Cabin Pressure Control System" }]
+        }
+      ]
+    }
+  },
+  { id:"cab_pr_12_fault",  chapter:"ME-21", name:"CAB PR SYS 1+2 FAULT",             fcom:"This alert triggers when both cabin pressure controllers are failed.", cb:[{panel:"49VU",des:"AIR COND/CAB/PRESS/CTL1",fin:"1HL",loc:"D09"},{panel:"122VU",des:"AIR COND/CAB PRESS/CTL/2",fin:"2HL",loc:"Y22"}], test:"TASK 21-31-00-710-002-A" ,
+    mel: {
+      aircraftStatus: "NIL",
+      conditionOfDispatch: "Refer to Item 21-63-02 Cockpit and Cabin Temperature Controller",
+      itemRef: "21-63-02", itemTitle: "Cockpit and Cabin Temperature Controller",
+      ident: "MI-21-63-00007509.0001001 / 30 JUL 21", applicable: "ALL",
+      items: [
+        {
+          code: "21-63-02A", title: "One temperature controller inoperative",
+          interval: "C", nbrInstalled: "2", nbrRequired: "1", placard: "No",
+          conditions: `<span class="cond-item">(o) One may be inoperative provided that EDTO is not conducted.</span>`,
+          note: "Notify Dispatch.", refs: []
+        }
+      ]
+    }
+  },
+  { id:"cab_pr_excess",    chapter:"ME-21", name:"CAB PR EXCESS CAB ALT",             fcom:"Triggers when cabin altitude is above 9550ft in cruise, or above higher of 9550ft / 1000ft above airfield pressure altitude in climb/descent.", cb:[], test:"TASK 21-31-00-710-002-A" ,
+    mel: {
+      aircraftStatus: "False alert",
+      conditionOfDispatch: "Refer to Item 52-10-10 Door Residual Differential Pressure Detection",
+      itemRef: "52-10-10", itemTitle: "Door Residual Differential Pressure Detection",
+      ident: "MI-52-10-00008785.0001001 / 30 JUL 21", applicable: "ALL",
+      items: [
+        {
+          code: "52-10-10A", title: "False alert",
+          interval: "C", nbrInstalled: "1", nbrRequired: "0", placard: "No",
+          conditions: `<span class="cond-item">(o)(m) May be inoperative provided that the associated door differential pressure is verified as zero before each flight.</span>`,
+          note: "", refs: []
+        }
+      ]
+    }
+  },
+  { id:"cab_pr_ldg_elev",  chapter:"ME-21", name:"CAB PR LDG ELEV FAULT",             fcom:"Triggers when LDG ELEV selector is AUTO and landing field elevation from FMGC is not available.", cb:[{panel:"49VU",des:"AIR COND/CAB/PRESS/CTL1",fin:"1HL",loc:"D09"},{panel:"121VU",des:"AUTO FLT/FMGC/1",fin:"10CA1",loc:"H08"},{panel:"121VU",des:"AUTO FLT/FMGC/2",fin:"10CA2",loc:"M17"}], test:"TASK 21-31-00-710-002-A / TASK 22-96-00-710-001-A" ,
+    mel: {
+      aircraftStatus: "NIL",
+      conditionOfDispatch: "Refer to Item 21-31-04 Landing Elevation Selection AUTO Function",
+      itemRef: "21-31-04", itemTitle: "Landing Elevation Selection AUTO Function",
+      ident: "MI-21-31-00007495.0001001 / 30 JUL 21", applicable: "ALL",
+      items: [
+        {
+          code: "21-31-04A", title: "",
+          interval: "C", nbrInstalled: "1", nbrRequired: "0", placard: "Yes",
+          conditions: `<span class="cond-item">(o) May be inoperative.</span>`,
+          note: "", refs: [{ type: "o", text: "Refer to OpsProc 21-31-04A Landing Elevation Selection AUTO Function" }]
+        }
+      ]
+    }
+  },
+  { id:"vent_avncs",       chapter:"ME-21", name:"VENT AVNCS SYS FAULT",              fcom:"Triggers when: power up test not satisfactory, AEVC not supplied, or valve position disagree.", cb:[{panel:"49VU",des:"AIR COND/AVNCS VENT/CTL",fin:"5HQ",loc:"D05"},{panel:"49VU",des:"AIR COND/AVNCS VENT/CTL",fin:"6HQ",loc:"D06"},{panel:"122VU",des:"AIR COND/AVNCS/VENT/MONG",fin:"3HQ",loc:"Y17"}], test:"TASK 21-26-00-710-001-A", reset:"拉C/B 122VU Y17（3HQ），等5秒後壓回" ,
+    mel: {
+      aircraftStatus: "If the avionics skin air outlet valve is affected",
+      conditionOfDispatch: "Refer to Item 21-26-04 Avionics Skin Air Outlet Valve",
+      itemRef: "21-26-04", itemTitle: "Avionics Skin Air Outlet Valve",
+      ident: "MI-21-26-00007477.0001001 / 16 NOV 22", applicable: "ALL",
+      items: [
+        {
+          code: "21-26-04A", title: "",
+          interval: "C", nbrInstalled: "1", nbrRequired: "0", placard: "No",
+          conditions: `<span class="cond-item">(o)(m) May be inoperative provided that:</span>
+<span class="cond-item"><strong>1)</strong> The internal flap is manually secured in the open position, and</span>
+<span class="cond-item"><strong>2)</strong> The skin air outlet valve is displayed in a partially open position on the CAB PRESS SD page.</span>`,
+          note: "", refs: [{ type: "m", text: "Refer to AMM Task 21-26-00-040-002" }]
+        }
+      ]
+    }
+  },
+  { id:"vent_blower",      chapter:"ME-21", name:"VENT BLOWER FAULT",                 fcom:"This alert triggers when the blowing pressure is low or there is a duct overheat.", cb:[{panel:"122VU",des:"AIR COND/AVNCS/VENT/MONG",fin:"3HQ",loc:"Y17"}], test:"開C/B，等5秒，壓回" ,
+    mel: {
+      aircraftStatus: "Actual alert",
+      conditionOfDispatch: "Refer to Item 21-26-01 Avionics Blower Fan",
+      itemRef: "21-26-01", itemTitle: "Avionics Blower Fan",
+      ident: "MI-21-26-00007474.0001001 / 30 JUL 21", applicable: "ALL",
+      items: [
+        {
+          code: "21-26-01A", title: "VENT AVNCS SYS FAULT not displayed",
+          interval: "C", nbrInstalled: "1", nbrRequired: "0", placard: "Yes",
+          conditions: `<span class="cond-item">(o) May be inoperative provided that:</span>
+<span class="cond-item"><strong>1)</strong> The BLOWER pb-sw is set to OVRD, and</span>
+<span class="cond-item"><strong>2)</strong> Both air conditioning packs are operative.</span>`,
+          note: "During ground operation, correct avionics ventilation should be provided.", refs: []
+        }
+      ]
+    }
+  },
+  { id:"vent_extract",     chapter:"ME-21", name:"VENT EXTRACT FAULT",                fcom:"This alert triggers when the extract pressure is low.", cb:[{panel:"122VU",des:"AIR COND/AVNCS/VENT/MONG",fin:"3HQ",loc:"Y17"}], test:"開C/B，等5秒，壓回" ,
+    mel: {
+      aircraftStatus: "Actual alert",
+      conditionOfDispatch: "Refer to Item 21-26-02 Avionics Extract Fan",
+      itemRef: "21-26-02", itemTitle: "Avionics Extract Fan",
+      ident: "MI-21-26-00007475.0001001 / 30 JUL 21", applicable: "ALL",
+      items: [
+        {
+          code: "21-26-02A", title: "VENT AVNCS SYS FAULT not displayed",
+          interval: "C", nbrInstalled: "1", nbrRequired: "0", placard: "Yes",
+          conditions: `<span class="cond-item">(o) May be inoperative provided that:</span>
+<span class="cond-item"><strong>1)</strong> The blower fan is operative, and</span>
+<span class="cond-item"><strong>2)</strong> The EXTRACT pb-sw is set to OVRD.</span>`,
+          note: "During ground operation, correct avionics ventilation should be provided.", refs: []
+        }
+      ]
+    }
+  },
+  { id:"vent_skin",        chapter:"ME-21", name:"VENT SKIN VALVE FAULT",             fcom:"Triggers when extract valve fully open in phase 3, or in flight, or inlet valve not fully closed in flight.", cb:[{panel:"122VU",des:"AIR COND/AVNCS/VENT/MONG",fin:"3HQ",loc:"Y17"}], test:"開C/B，等5秒，壓回" ,
+    mel: {
+      aircraftStatus: "Outlet valve determined faulty on CAB PRESS SD page",
+      conditionOfDispatch: "Refer to Item 21-26-04 Avionics Skin Air Outlet Valve",
+      itemRef: "21-26-04", itemTitle: "Avionics Skin Air Outlet Valve",
+      ident: "MI-21-26-00007477.0001001 / 16 NOV 22", applicable: "ALL",
+      items: [
+        {
+          code: "21-26-04A", title: "",
+          interval: "C", nbrInstalled: "1", nbrRequired: "0", placard: "No",
+          conditions: `<span class="cond-item">(o)(m) May be inoperative provided that:</span>
+<span class="cond-item"><strong>1)</strong> The internal flap is manually secured in the open position, and</span>
+<span class="cond-item"><strong>2)</strong> The skin air outlet valve is displayed amber or closed on the CAB PRESS SD page.</span>`,
+          note: "", refs: [{ type: "m", text: "Refer to AMM Task 21-26-00-040-002" }]
+        }
+      ]
+    }
+  },
+  { id:"cond_trim_air",    chapter:"ME-21", name:"COND TRIM AIR SYS FAULT",           fcom:"Triggers when one trim air valve is failed, or overpressure downstream of the hot air valve.", cb:[{panel:"49VU",des:"AIR COND/TEMP CTL/SYS 1 CHAN B/28VDC",fin:"52HH",loc:"D08"},{panel:"122VU",des:"AIR COND/TEMP CTL SYS 1/CHAN A/115VAC",fin:"49HH",loc:"X22"},{panel:"122VU",des:"AIR COND/TEMP CTL SYS 2/CHAN A/115VAC",fin:"53HH",loc:"W22"}], test:"TASK 21-63-00-710-004-A", reset:"依序開C/B: 55HH→53HH→51HH→49HH→50HH→56HH→52HH\n等5秒後壓回所有C/B" ,
+    mel: {
+      aircraftStatus: "If associated with the AFT CAB TRIM VALVE subtitle",
+      conditionOfDispatch: "Refer to Item 21-63-02 Cockpit and Cabin Temperature Controller",
+      itemRef: "21-63-02", itemTitle: "Cockpit and Cabin Temperature Controller",
+      ident: "MI-21-63-00007509.0001001 / 30 JUL 21", applicable: "ALL",
+      items: [
+        {
+          code: "21-63-02A", title: "One temperature controller inoperative",
+          interval: "C", nbrInstalled: "2", nbrRequired: "1", placard: "No",
+          conditions: `<span class="cond-item">(o) One may be inoperative provided that EDTO is not conducted.</span>`,
+          note: "Notify Dispatch.", refs: []
+        }
+      ]
+    }
+  },
+  { id:"aft_crg_heat",     chapter:"ME-21", name:"COND AFT CRG HEAT FAULT",           fcom:"Triggers if the heating controller of the FWD(AFT) cargo compartment is failed.", cb:[{panel:"49VU",des:"AIR COND/AFT CARGO/VENT & HTG/CTL & MONG",fin:"31HN",loc:"C07"}], test:"TASK 21-43-00-740-002-A" ,
+    mel: {
+      aircraftStatus: "NIL",
+      conditionOfDispatch: "Refer to Item 21-43-02 AFT Cargo Compartment Heating",
+      itemRef: "21-43-02", itemTitle: "AFT Cargo Compartment Heating",
+      ident: "MI-21-43-00007498.0002001 / 30 JUL 21", applicable: "B-18101~B-18126",
+      items: [
+        {
+          code: "21-43-02A", title: "HOT AIR pb-sw OFF",
+          interval: "D", nbrInstalled: "1", nbrRequired: "0", placard: "No",
+          conditions: `<span class="cond-item">(o) Heating system may be inoperative provided that heating is not required for the cargo type being carried.</span>`,
+          note: "", refs: [{ type: "o", text: "Refer to OpsProc 21-43-02A AFT Cargo Compartment Heating" }]
+        }
+      ]
+    }
+  },
 
   // ME-22 Auto Flight
-  { id:"ap_off",           chapter:"ME-22", name:"AUTO FLT AP OFF",                   fcom:"Triggers only for involuntary disconnection. For voluntary disconnect, red AP OFF on ECAM.", cb:[{panel:"49VU",des:"AUTO FLT/FMGC/1",fin:"10CA1",loc:"H08"},{panel:"121VU",des:"AUTO FLT/FMGC/2",fin:"10CA2",loc:"M17"}], test:"TASK 22-96-00-710-001-A" },
-  { id:"athr_off",         chapter:"ME-22", name:"AUTO FLT A/THR OFF",                fcom:"Triggers only for involuntary A/THR disconnection. Amber A/THR OFF and ENG THRUST LOCKED shown.", cb:[{panel:"49VU",des:"AUTO FLT/FMGC/1",fin:"10CA1",loc:"H08"},{panel:"121VU",des:"AUTO FLT/FMGC/2",fin:"10CA2",loc:"M17"}], test:"TASK 22-96-00-710-001-A", reset:"ENG不運轉: 按FCU A/THR pb重新接合，再按A/THR instinctive disconnect pb斷開\nENG運轉: 加EXT PWR or APU GEN → ENG MASTER OFF → 按FCU A/THR pb → 按disconnect pb" },
-  { id:"athr_limited",     chapter:"ME-22", name:"AUTO FLT A/THR LIMITED",            fcom:"Triggers when A/THR active but thrust levers below CL detent (2 eng) or MCT (1 eng). Caution repeated every 5s.", cb:[], test:"檢查PFR，無maintenance message則無需維修" },
-  { id:"fac1_fault",       chapter:"ME-22", name:"AUTO FLT FAC 1 FAULT",              fcom:"Triggers when one FAC computer is failed.", cb:[{panel:"49VU",des:"AUTO FLT/FAC1/28VDC",fin:"5CC1",loc:"H10"},{panel:"49VU",des:"AUTO FLT/FAC1/26VAC",fin:"14CC1",loc:"H09"}], test:"TASK 22-96-00-710-001-A" },
-  { id:"fac2_fault",       chapter:"ME-22", name:"AUTO FLT FAC 2 FAULT",              fcom:"Triggers when one FAC computer is failed.", cb:[{panel:"121VU",des:"AUTO FLT/FAC2/28VDC",fin:"5CC2",loc:"M19"},{panel:"121VU",des:"AUTO FLT/FAC2/26VAC",fin:"14CC2",loc:"M18"}], test:"TASK 22-96-00-710-001-A" },
-  { id:"fac12_fault",      chapter:"ME-22", name:"AUTO FLT FAC 1+2 FAULT",            fcom:"Triggers when two FAC computers are failed.", cb:[{panel:"49VU",des:"AUTO FLT/FAC1/28VDC",fin:"5CC1",loc:"H10"},{panel:"121VU",des:"AUTO FLT/FAC2/28VDC",fin:"5CC2",loc:"M19"}], test:"TASK 22-96-00-710-001-A" },
-  { id:"fcu1_fault",       chapter:"ME-22", name:"AUTO FLT FCU 1(2) FAULT",           fcom:"Triggers when only one FCU channel remains operative.", cb:[{panel:"49VU",des:"AUTO FLT/FCU/1",fin:"9CA1",loc:"H11"},{panel:"121VU",des:"AUTO FLT/FCU/2",fin:"9CA2",loc:"M21"}], test:"TASK 22-96-00-710-001-A", reset:"1. 拉FCU 1或2 C/B，等5秒後壓回\n2. 若FAULT仍在:\n   拉FCU 1+2 C/Bs，等7分鐘後5秒內分別壓回\n   待30秒系統完成SAFETY TEST" },
-  { id:"fcu12_fault",      chapter:"ME-22", name:"AUTO FLT FCU 1+2 FAULT",            fcom:"Triggers when the FCU is completely lost.", cb:[{panel:"49VU",des:"AUTO FLT/FCU/1",fin:"9CA1",loc:"H11"},{panel:"121VU",des:"AUTO FLT/FCU/2",fin:"9CA2",loc:"M21"}], test:"TASK 22-91-00-710-001-A", reset:"同FCU 1(2) FAULT程序，優先拉兩個C/B同時等5秒後壓回" },
+  { id:"ap_off",           chapter:"ME-22", name:"AUTO FLT AP OFF",                   fcom:"Triggers only for involuntary disconnection. For voluntary disconnect, red AP OFF on ECAM.", cb:[{panel:"49VU",des:"AUTO FLT/FMGC/1",fin:"10CA1",loc:"H08"},{panel:"121VU",des:"AUTO FLT/FMGC/2",fin:"10CA2",loc:"M17"}], test:"TASK 22-96-00-710-001-A" ,
+    mel: {
+      aircraftStatus: "Actual alert",
+      conditionOfDispatch: "Refer to Item 22-10-01 Autopilot (AP)",
+      itemRef: "22-10-01", itemTitle: "Autopilot (AP)",
+      ident: "MI-22-10-00007529.0002001 / 05 MAR 25", applicable: "ALL",
+      items: [
+        {
+          code: "22-10-01A", title: "One inoperative",
+          interval: "C", nbrInstalled: "2", nbrRequired: "1", placard: "Yes",
+          conditions: `<span class="cond-item">(o) One may be inoperative provided that CAT IIIb operation is not allowed.</span>`,
+          note: "Notify Dispatch. CAL is NOT authorized to conduct RNP AR operation.", refs: [{ type: "o", text: "Refer to OpsProc 22-10-01A Autopilot (AP)" }]
+        },
+        {
+          code: "22-10-01B", title: "Both inoperative",
+          interval: "B", nbrInstalled: "2", nbrRequired: "0", placard: "Yes",
+          conditions: `<span class="cond-item">(o) Both may be inoperative provided that:</span>
+<span class="cond-item"><strong>1)</strong> CAT I/II/III operations are not conducted, and</span>
+<span class="cond-item"><strong>2)</strong> FMGC managed guidance is not used.</span>`,
+          note: "Notify Dispatch.", refs: [{ type: "o", text: "Refer to OpsProc 22-10-01B Autopilot (AP) Both Inoperative" }]
+        }
+      ]
+    }
+  },
+  { id:"athr_off",         chapter:"ME-22", name:"AUTO FLT A/THR OFF",                fcom:"Triggers only for involuntary A/THR disconnection. Amber A/THR OFF and ENG THRUST LOCKED shown.", cb:[{panel:"49VU",des:"AUTO FLT/FMGC/1",fin:"10CA1",loc:"H08"},{panel:"121VU",des:"AUTO FLT/FMGC/2",fin:"10CA2",loc:"M17"}], test:"TASK 22-96-00-710-001-A", reset:"ENG不運轉: 按FCU A/THR pb重新接合，再按A/THR instinctive disconnect pb斷開\nENG運轉: 加EXT PWR or APU GEN → ENG MASTER OFF → 按FCU A/THR pb → 按disconnect pb" ,
+    mel: {
+      aircraftStatus: "NIL",
+      conditionOfDispatch: "Refer to Item 22-30-01 Autothrust (A/THR)",
+      itemRef: "22-30-01", itemTitle: "Autothrust (A/THR)",
+      ident: "MI-22-30-00007536.0002001 / 23 NOV 23", applicable: "ALL",
+      items: [
+        {
+          code: "22-30-01A", title: "",
+          interval: "C", nbrInstalled: "1", nbrRequired: "0", placard: "Yes",
+          conditions: `<span class="cond-item">(o) May be inoperative provided that:</span>
+<span class="cond-item"><strong>1)</strong> The autothrust (A/THR) is disconnected before each flight, and</span>
+<span class="cond-item"><strong>2)</strong> The Soft Go-Around function is considered inoperative.</span>
+<span class="cond-item">Refer to Item 22-10-09 Soft Go-Around Function</span>`,
+          note: "", refs: [{ type: "o", text: "Refer to OpsProc 22-30-01A Autothrust (A/THR)" }]
+        }
+      ]
+    }
+  },
+  { id:"athr_limited",     chapter:"ME-22", name:"AUTO FLT A/THR LIMITED",            fcom:"Triggers when A/THR active but thrust levers below CL detent (2 eng) or MCT (1 eng). Caution repeated every 5s.", cb:[], test:"檢查PFR，無maintenance message則無需維修" ,
+    mel: {
+      aircraftStatus: "NIL",
+      conditionOfDispatch: "Refer to Item 22-30-01 Autothrust (A/THR)",
+      itemRef: "22-30-01", itemTitle: "Autothrust (A/THR)",
+      ident: "MI-22-30-00007536.0002001 / 23 NOV 23", applicable: "ALL",
+      items: [
+        {
+          code: "22-30-01A", title: "",
+          interval: "C", nbrInstalled: "1", nbrRequired: "0", placard: "Yes",
+          conditions: `<span class="cond-item">(o) May be inoperative provided that:</span>
+<span class="cond-item"><strong>1)</strong> The autothrust (A/THR) is disconnected before each flight, and</span>
+<span class="cond-item"><strong>2)</strong> The Soft Go-Around function is considered inoperative.</span>
+<span class="cond-item">Refer to Item 22-10-09 Soft Go-Around Function</span>`,
+          note: "", refs: [{ type: "o", text: "Refer to OpsProc 22-30-01A Autothrust (A/THR)" }]
+        }
+      ]
+    }
+  },
+  { id:"fac1_fault",       chapter:"ME-22", name:"AUTO FLT FAC 1 FAULT",              fcom:"Triggers when one FAC computer is failed.", cb:[{panel:"49VU",des:"AUTO FLT/FAC1/28VDC",fin:"5CC1",loc:"H10"},{panel:"49VU",des:"AUTO FLT/FAC1/26VAC",fin:"14CC1",loc:"H09"}], test:"TASK 22-96-00-710-001-A" ,
+    mel: {
+      aircraftStatus: "NIL",
+      conditionOfDispatch: "Refer to Item 22-60-01 FAC 1",
+      itemRef: "22-60-01", itemTitle: "FAC 1",
+      ident: "MI-22-60-00007539.0001001 / 19 MAY 21", applicable: "ALL",
+      items: [
+        {
+          code: "22-60-01A", title: "",
+          interval: "–", nbrInstalled: "1", nbrRequired: "1", placard: "No",
+          conditions: `<span class="cond-item">(m) Must be operative.</span>
+<span class="cond-item">Note: AUTO FLT FAC 1 FAULT may appear with AUTO FLT/FAC1/28VDC C/B tripped — may be caused by short circuit in rudder trim actuator channel 1 or rudder travel limiter actuator channel 1.</span>`,
+          note: "", refs: []
+        }
+      ]
+    }
+  },
+  { id:"fac2_fault",       chapter:"ME-22", name:"AUTO FLT FAC 2 FAULT",              fcom:"Triggers when one FAC computer is failed.", cb:[{panel:"121VU",des:"AUTO FLT/FAC2/28VDC",fin:"5CC2",loc:"M19"},{panel:"121VU",des:"AUTO FLT/FAC2/26VAC",fin:"14CC2",loc:"M18"}], test:"TASK 22-96-00-710-001-A" ,
+    mel: {
+      aircraftStatus: "NIL",
+      conditionOfDispatch: "Refer to Item 22-60-02 FAC 2",
+      itemRef: "22-60-02", itemTitle: "FAC 2",
+      ident: "MI-22-60-00007540.0001001 / 30 JUL 21", applicable: "ALL",
+      items: [
+        {
+          code: "22-60-02A", title: "",
+          interval: "C", nbrInstalled: "1", nbrRequired: "0", placard: "Yes",
+          conditions: `<span class="cond-item">(o) May be inoperative provided that:</span>
+<span class="cond-item"><strong>1)</strong> All ADIRSs, ELACs, SECs, SFCCs, LGCIUs and RAs are operative, and</span>
+<span class="cond-item"><strong>2)</strong> The Rudder Travel Limiter System 2 is considered inoperative.</span>
+<span class="cond-item">Refer to Item 22-60-04 Yaw Damper System</span>`,
+          note: "", refs: [{ type: "o", text: "Refer to OpsProc 22-60-02A FAC 2" }]
+        }
+      ]
+    }
+  },
+  { id:"fac12_fault",      chapter:"ME-22", name:"AUTO FLT FAC 1+2 FAULT",            fcom:"Triggers when two FAC computers are failed.", cb:[{panel:"49VU",des:"AUTO FLT/FAC1/28VDC",fin:"5CC1",loc:"H10"},{panel:"121VU",des:"AUTO FLT/FAC2/28VDC",fin:"5CC2",loc:"M19"}], test:"TASK 22-96-00-710-001-A" ,
+    mel: {
+      aircraftStatus: "NIL",
+      conditionOfDispatch: "Refer to Item 22-81-03-01 FCU Channel",
+      itemRef: "22-81-03-01", itemTitle: "FCU Channel",
+      ident: "MI-22-81-03-00007571.0002001 / 05 MAR 25", applicable: "ALL",
+      items: [
+        {
+          code: "22-81-03-01A", title: "Non EDTO flight",
+          interval: "C", nbrInstalled: "2", nbrRequired: "1", placard: "No",
+          conditions: `<span class="cond-item">(o) One channel may be inoperative provided that:</span>
+<span class="cond-item"><strong>1)</strong> EDTO is not conducted, and</span>
+<span class="cond-item"><strong>2)</strong> Two RMPs, all DUs, both RAs, both LGCIUs, both FACs, both CPCs and both ADRSs are operative.</span>`,
+          note: "", refs: [{ type: "o", text: "Refer to OpsProc 22-81-03-01A FCU Channel" }]
+        },
+        {
+          code: "22-81-03-01B", title: "Both channels inoperative (ferry)",
+          interval: "A", nbrInstalled: "2", nbrRequired: "0", placard: "No",
+          conditions: `<span class="cond-item">Both channels may be inoperative for ferry to where repair can be made. All autopilot and autothrust functions are considered inoperative.</span>`,
+          note: "", refs: []
+        }
+      ]
+    }
+  },
+  { id:"fcu1_fault",       chapter:"ME-22", name:"AUTO FLT FCU 1(2) FAULT",           fcom:"Triggers when only one FCU channel remains operative.", cb:[{panel:"49VU",des:"AUTO FLT/FCU/1",fin:"9CA1",loc:"H11"},{panel:"121VU",des:"AUTO FLT/FCU/2",fin:"9CA2",loc:"M21"}], test:"TASK 22-96-00-710-001-A", reset:"1. 拉FCU 1或2 C/B，等5秒後壓回\n2. 若FAULT仍在:\n   拉FCU 1+2 C/Bs，等7分鐘後5秒內分別壓回\n   待30秒系統完成SAFETY TEST" ,
+    mel: {
+      aircraftStatus: "NIL",
+      conditionOfDispatch: "Refer to Item 22-81-03-01 FCU Channel",
+      itemRef: "22-81-03-01", itemTitle: "FCU Channel",
+      ident: "MI-22-81-03-00007571.0002001 / 05 MAR 25", applicable: "ALL",
+      items: [
+        {
+          code: "22-81-03-01A", title: "Non EDTO flight",
+          interval: "C", nbrInstalled: "2", nbrRequired: "1", placard: "No",
+          conditions: `<span class="cond-item">(o) One channel may be inoperative provided that:</span>
+<span class="cond-item"><strong>1)</strong> EDTO is not conducted, and</span>
+<span class="cond-item"><strong>2)</strong> Two RMPs, all DUs, both RAs, both LGCIUs, both FACs, both CPCs and both ADRSs are operative.</span>`,
+          note: "", refs: [{ type: "o", text: "Refer to OpsProc 22-81-03-01A FCU Channel" }]
+        },
+        {
+          code: "22-81-03-01B", title: "Both channels inoperative (ferry)",
+          interval: "A", nbrInstalled: "2", nbrRequired: "0", placard: "No",
+          conditions: `<span class="cond-item">Both channels may be inoperative for ferry to where repair can be made. All autopilot and autothrust functions are considered inoperative.</span>`,
+          note: "", refs: []
+        }
+      ]
+    }
+  },
+  { id:"fcu12_fault",      chapter:"ME-22", name:"AUTO FLT FCU 1+2 FAULT",            fcom:"Triggers when the FCU is completely lost.", cb:[{panel:"49VU",des:"AUTO FLT/FCU/1",fin:"9CA1",loc:"H11"},{panel:"121VU",des:"AUTO FLT/FCU/2",fin:"9CA2",loc:"M21"}], test:"TASK 22-91-00-710-001-A", reset:"同FCU 1(2) FAULT程序，優先拉兩個C/B同時等5秒後壓回" ,
+    mel: {
+      aircraftStatus: "NIL",
+      conditionOfDispatch: "Refer to Item 22-81-03-01 FCU Channel",
+      itemRef: "22-81-03-01", itemTitle: "FCU Channel",
+      ident: "MI-22-81-03-00007571.0002001 / 05 MAR 25", applicable: "ALL",
+      items: [
+        {
+          code: "22-81-03-01A", title: "Non EDTO flight",
+          interval: "C", nbrInstalled: "2", nbrRequired: "1", placard: "No",
+          conditions: `<span class="cond-item">(o) One channel may be inoperative provided that:</span>
+<span class="cond-item"><strong>1)</strong> EDTO is not conducted, and</span>
+<span class="cond-item"><strong>2)</strong> Two RMPs, all DUs, both RAs, both LGCIUs, both FACs, both CPCs and both ADRSs are operative.</span>`,
+          note: "", refs: [{ type: "o", text: "Refer to OpsProc 22-81-03-01A FCU Channel" }]
+        },
+        {
+          code: "22-81-03-01B", title: "Both channels inoperative (ferry)",
+          interval: "A", nbrInstalled: "2", nbrRequired: "0", placard: "No",
+          conditions: `<span class="cond-item">Both channels may be inoperative for ferry to where repair can be made. All autopilot and autothrust functions are considered inoperative.</span>`,
+          note: "", refs: []
+        }
+      ]
+    }
+  },
   { id:"fmgc_malfunction", chapter:"ME-22", name:"FMGC MALFUNCTION",                  fcom:"If ENG not running (效果較好): 上電2分鐘後將FD 1(2) pb OFF，拉FMGC C/B，10秒後壓回\nIf ENG running: FD 1(2) pb OFF，拉FMGC C/B，10秒後壓回", cb:[{panel:"49VU",des:"AUTO FLT/FMGC/1",fin:"10CA1",loc:"H08"},{panel:"121VU",des:"AUTO FLT/FMGC/2",fin:"10CA2",loc:"M17"}], test:"TASK 22-70-00-710-001-A", reset:"若ENG不運轉 (效果較好):\n- 上電2分鐘後，FD1 pb OFF\n- 拉C/B 10CA1，等10秒，壓回\n- 等1分鐘或待MCDU \"PLEASE WAIT\"消失\n\n若ENG運轉:\n- FD1 pb OFF\n- 拉C/B 10CA1，等10秒，壓回" },
   { id:"mcdu_one_blank",   chapter:"ME-22", name:"One MCDU locked or blank",           fcom:"拉對應C/B，等10秒後壓回。", cb:[{panel:"49VU",des:"AUTO FLT/MCDU/1",fin:"11CA1",loc:"H07"},{panel:"121VU",des:"AUTO FLT/MCDU/2",fin:"11CA2",loc:"N20"},{panel:"121VU",des:"AUTO FLT/MCDU/3",fin:"11CA3",loc:"N21"}], test:"TASK 22-70-00-710-001-A", reset:"MCDU 1: 拉C/B 11CA1，等10秒，壓回\nMCDU 2: 拉C/B 11CA2，等10秒，壓回\nMCDU 3: 拉C/B 11CA3，等10秒，壓回" },
   { id:"mcdu_both_blank",  chapter:"ME-22", name:"Both MCDU locked or blank",          fcom:"同FMGC程序，ENG不運轉時效果較好。", cb:[{panel:"49VU",des:"AUTO FLT/FMGC/1",fin:"10CA1",loc:"H08"},{panel:"121VU",des:"AUTO FLT/FMGC/2",fin:"10CA2",loc:"M17"}], test:"TASK 22-70-00-710-001-A", reset:"參考FMGC MALFUNCTION程序" },
@@ -1184,7 +1305,22 @@ const alerts = [
   { id:"fuel_lo_lvl",      chapter:"ME-28", name:"FUEL L(R) WING TK LO LVL",         fcom:"Triggers when wing tank QTY below 1650 lb (sensor-based, independent of FQIS).", cb:[{panel:"49VU",des:"FUEL/AFT LOW LVL/& OVFL/WING L",fin:"43QJ",loc:"A10"},{panel:"49VU",des:"FUEL/AFT LOW LVL/& OVFL/WING R",fin:"44QJ",loc:"A11"}], test:"TASK 28-46-00-740-001-A" },
   { id:"fuel_ctr_xfr",     chapter:"ME-28", name:"FUEL CTR TK XFR OFF",              fcom:"Triggers when CTR TK XFR pb-sw and CTR TK R XFR pb-sw at OFF in auto mode.", cb:[], test:"TASK 28-26-00-810-814-A (可能忘記開啟)" },
   { id:"fuel_fused_dis",   chapter:"ME-28", name:"FUEL F.USED/FOB DISAGREE",          fcom:"Triggers when difference between initial FOB and actual FOB+fuel used is significant.", cb:[{panel:"49VU",des:"FUEL/FQI/CHAN/1",fin:"1QT",loc:"A13"},{panel:"121VU",des:"FUEL/FQI/CHAN/2",fin:"2QT",loc:"M27"}], test:"TASK 28-42-00-740-001-A" },
-  { id:"fuel_inerting",    chapter:"ME-28", name:"FUEL INERTING SYS FAULT",           fcom:"Triggers when the fuel inerting system is failed.", cb:[{panel:"121VU",des:"IGGS/CTRL",fin:"7YA",loc:"P28"},{panel:"122VU",des:"CSAS / CTRL",fin:"1HW",loc:"U17"}], test:"TASK 21-58-00-710-002-A" },
+  { id:"fuel_inerting",    chapter:"ME-28", name:"FUEL INERTING SYS FAULT",           fcom:"Triggers when the fuel inerting system is failed.", cb:[{panel:"121VU",des:"IGGS/CTRL",fin:"7YA",loc:"P28"},{panel:"122VU",des:"CSAS / CTRL",fin:"1HW",loc:"U17"}], test:"TASK 21-58-00-710-002-A" ,
+    mel: {
+      aircraftStatus: "NIL",
+      conditionOfDispatch: "Refer to Item 47-10-01 Fuel Tank Inerting System",
+      itemRef: "47-10-01", itemTitle: "Fuel Tank Inerting System",
+      ident: "MI-47-10-00014411.0002001 / 30 JUL 21", applicable: "ALL",
+      items: [
+        {
+          code: "47-10-01A", title: "",
+          interval: "C", nbrInstalled: "1", nbrRequired: "0", placard: "No",
+          conditions: `<span class="cond-item">(o) May be inoperative.</span>`,
+          note: "", refs: []
+        }
+      ]
+    }
+  },
 
   // ME-29 Hydraulic
   { id:"hyd_b_elec_lo_pr", chapter:"ME-29", name:"HYD B ELEC PUMP LO PR",            fcom:"Triggers when pump outlet pressure ≤1450 PSI.", cb:[{panel:"49VU",des:"HYD/HYD PWR/B WARN/& CTL",fin:"2702GJ",loc:"C12"},{panel:"123VU",des:"B HYD/ELEC PUMP",fin:"2701GJ",loc:"AB09"}], test:"TASK 29-12-00-710-001-A" },
@@ -1235,60 +1371,452 @@ const alerts = [
   { id:"nav_adrsb_fault",  chapter:"ME-34", name:"NAV ADS-B RPTG 1(2) FAULT",        fcom:"ADS-B reporting function failed.", cb:[{panel:"49VU",des:"COM NAV/ATC/1",fin:"5SH1",loc:"G11"},{panel:"121VU",des:"T/TISS",fin:"2004SG",loc:"N14"}], test:"TASK 34-52-00-740-004-A", eon:"TFU 31.50.00.023: ADS-B TRAF/RPTG FAULT可能是短暫雙GPS遺失造成，應排查GPS遺失，不要針對transponder換側處理。\nISI 34.52.00035: 特定地區GPS訊號干擾可觸發，訊號恢復後ECAM會自動消失。" },
 
   // ME-36 Pneumatic
-  { id:"air_eng_bleed_fault",chapter:"ME-36", name:"AIR ENG 1(2) BLEED FAULT",      fcom:"Triggers when eng running and: both bleed temp sensors lost, bleed pressure >57PSI, or bleed temp >257°C(55s) / 270°C(15s) / 290°C(5s).", cb:[{panel:"49VU",des:"AIR BLEED/ENG 1/CTL",fin:"2HA1",loc:"D11"},{panel:"122VU",des:"AIR BLEED/ENG 1/MONG",fin:"3HA1",loc:"Z23"},{panel:"49VU",des:"AIR BLEED/ENG 2/MONG",fin:"3HA2",loc:"D12"},{panel:"122VU",des:"AIR BLEED/ENG 2/CTL",fin:"2HA2",loc:"Z22"}], test:"TASK 36-11-00-740-802-A", reset:"1. ENG BLEED (affected) OFF\n2. 若FAULT燈滅後:\n   X BLEED: AUTO\n   PACK (affected): ON\n   ENG BLEED (affected): ON\n3. 確認BLEED SD頁面閥門開啟\n4. 若重現: ENG BLEED OFF, X BLEED: OPEN" },
-  { id:"air_eng_bleed_not_clsd",chapter:"ME-36",name:"AIR ENG 1(2) BLEED NOT CLSD", fcom:"Triggers when engine running, bleed valve fails to close, and bleed pressure >57PSI or bleed temp >threshold.", cb:[], test:"TASK 36-11-00-740-802-A", reset:"1. ENG BLEED OFF\n2. 待FAULT清除後: ENG BLEED ON" },
+  { id:"air_eng_bleed_fault",chapter:"ME-36", name:"AIR ENG 1(2) BLEED FAULT",      fcom:"Triggers when eng running and: both bleed temp sensors lost, bleed pressure >57PSI, or bleed temp >257°C(55s) / 270°C(15s) / 290°C(5s).", cb:[{panel:"49VU",des:"AIR BLEED/ENG 1/CTL",fin:"2HA1",loc:"D11"},{panel:"122VU",des:"AIR BLEED/ENG 1/MONG",fin:"3HA1",loc:"Z23"},{panel:"49VU",des:"AIR BLEED/ENG 2/MONG",fin:"3HA2",loc:"D12"},{panel:"122VU",des:"AIR BLEED/ENG 2/CTL",fin:"2HA2",loc:"Z22"}], test:"TASK 36-11-00-740-802-A", reset:"1. ENG BLEED (affected) OFF\n2. 若FAULT燈滅後:\n   X BLEED: AUTO\n   PACK (affected): ON\n   ENG BLEED (affected): ON\n3. 確認BLEED SD頁面閥門開啟\n4. 若重現: ENG BLEED OFF, X BLEED: OPEN" ,
+    mel: {
+      aircraftStatus: "If HP valve affected",
+      conditionOfDispatch: "Refer to Item 36-11-07B Engine Bleed HP Valve",
+      itemRef: "36-11-07", itemTitle: "Engine Bleed HP Valve",
+      ident: "MI-36-11-00008798.0001001 / 30 JUL 21", applicable: "ALL",
+      items: [
+        {
+          code: "36-11-07A", title: "Associated bleed considered inoperative",
+          interval: "C", nbrInstalled: "2", nbrRequired: "1", placard: "No",
+          conditions: `<span class="cond-item">One may be inoperative in the closed position provided that the associated engine bleed air supply system is considered inoperative.</span>
+<span class="cond-item">Refer to Item 36-11-01 Engine Bleed Air Supply System</span>`,
+          note: "", refs: []
+        }
+      ]
+    }
+  },
+  { id:"air_eng_bleed_not_clsd",chapter:"ME-36",name:"AIR ENG 1(2) BLEED NOT CLSD", fcom:"Triggers when engine running, bleed valve fails to close, and bleed pressure >57PSI or bleed temp >threshold.", cb:[], test:"TASK 36-11-00-740-802-A", reset:"1. ENG BLEED OFF\n2. 待FAULT清除後: ENG BLEED ON" ,
+    mel: {
+      aircraftStatus: "NIL",
+      conditionOfDispatch: "Refer to Item 36-11-02 Engine Bleed Valve (PRV)",
+      itemRef: "36-11-02", itemTitle: "Engine Bleed Valve (PRV)",
+      ident: "MI-36-11-00008793.0001001 / 30 JUL 21", applicable: "ALL",
+      items: [
+        {
+          code: "36-11-02A", title: "",
+          interval: "C", nbrInstalled: "2", nbrRequired: "1", placard: "No",
+          conditions: `<span class="cond-item">(o)(m) One may be inoperative in the closed position provided that the associated engine bleed air supply system is considered inoperative.</span>`,
+          note: "", refs: [{ type: "m", text: "Refer to AMM Task 36-11-00-040-001" }]
+        }
+      ]
+    }
+  },
   { id:"air_apu_bleed_fault",chapter:"ME-36", name:"AIR APU BLEED FAULT",           fcom:"Triggers when APU running and APU bleed valve position disagrees with APU BLEED pb-sw selection.", cb:[{panel:"121VU",des:"APU/APU/CTL",fin:"2KD",loc:"L42"},{panel:"49VU",des:"AIR BLEED/ENG 1/CTL",fin:"2HA1",loc:"D11"}], test:"TASK 49-00-00-710-009-A / TASK 36-11-00-740-802-A" },
-  { id:"air_bleed12_fault",  chapter:"ME-36", name:"AIR ENG 1+2 BLEED FAULT",       fcom:"Triggers when both engine bleed supply systems lost without wing or pylon leak.", cb:[{panel:"49VU",des:"AIR BLEED/ENG 1/CTL",fin:"2HA1",loc:"D11"},{panel:"122VU",des:"AIR BLEED/ENG 1/MONG",fin:"3HA1",loc:"Z23"}], test:"若無maintenance message: 無需維修。\nTASK 36-11-00-740-802-A / TASK 36-11-00-740-810-A" },
-  { id:"bleed_monit_fault",  chapter:"ME-36", name:"BLEED MONIT SYS 1(2) FAULT",    fcom:"Triggers when BMC 1(2) is failed.", cb:[{panel:"49VU",des:"AIR BLEED/ENG 1/CTL",fin:"2HA1",loc:"D11"},{panel:"122VU",des:"AIR BLEED/ENG 2/CTL",fin:"2HA2",loc:"Z22"}], test:"TASK 36-11-00-740-802-A" },
+  { id:"air_bleed12_fault",  chapter:"ME-36", name:"AIR ENG 1+2 BLEED FAULT",       fcom:"Triggers when both engine bleed supply systems lost without wing or pylon leak.", cb:[{panel:"49VU",des:"AIR BLEED/ENG 1/CTL",fin:"2HA1",loc:"D11"},{panel:"122VU",des:"AIR BLEED/ENG 1/MONG",fin:"3HA1",loc:"Z23"}], test:"若無maintenance message: 無需維修。\nTASK 36-11-00-740-802-A / TASK 36-11-00-740-810-A" ,
+    mel: {
+      aircraftStatus: "If HP valve affected",
+      conditionOfDispatch: "Refer to Item 36-11-07B Engine Bleed HP Valve",
+      itemRef: "36-11-07", itemTitle: "Engine Bleed HP Valve",
+      ident: "MI-36-11-00008798.0001001 / 30 JUL 21", applicable: "ALL",
+      items: [
+        {
+          code: "36-11-07A", title: "Associated bleed considered inoperative",
+          interval: "C", nbrInstalled: "2", nbrRequired: "1", placard: "No",
+          conditions: `<span class="cond-item">One or both may be inoperative in the closed position provided that the associated engine bleed air supply systems are considered inoperative.</span>`,
+          note: "", refs: []
+        }
+      ]
+    }
+  },
+  { id:"bleed_monit_fault",  chapter:"ME-36", name:"BLEED MONIT SYS 1(2) FAULT",    fcom:"Triggers when BMC 1(2) is failed.", cb:[{panel:"49VU",des:"AIR BLEED/ENG 1/CTL",fin:"2HA1",loc:"D11"},{panel:"122VU",des:"AIR BLEED/ENG 2/CTL",fin:"2HA2",loc:"Z22"}], test:"TASK 36-11-00-740-802-A" ,
+    mel: {
+      aircraftStatus: "NIL",
+      conditionOfDispatch: "Refer to Item 36-11-08 Bleed Monitoring Computer (BMC)",
+      itemRef: "36-11-08", itemTitle: "Bleed Monitoring Computer (BMC)",
+      ident: "MI-36-11-00008799.0012001 / 05 MAR 25", applicable: "ALL",
+      items: [
+        {
+          code: "36-11-08A", title: "BMC 1 inoperative",
+          interval: "–", nbrInstalled: "2", nbrRequired: "1", placard: "No",
+          conditions: `<span class="cond-item">BMC 1 may be inoperative provided that:</span>
+<span class="cond-item"><strong>1)</strong> EDTO is not conducted, and</span>
+<span class="cond-item"><strong>2)</strong> The engine 1 bleed air supply system is considered inoperative.</span>`,
+          note: "", refs: []
+        }
+      ]
+    }
+  },
 
   // ME-46 Information Systems
   { id:"data_link_atc",    chapter:"ME-46", name:"DATA LINK ATC FAULT",              fcom:"Triggers when ATC datalink communication failed or ATC datalink application lost.", cb:[{panel:"121VU",des:"ATSU 1",fin:"3TX1",loc:"K43"},{panel:"121VU",des:"ATSU 1/SWTG",fin:"5TX1",loc:"K42"}], test:"TASK 46-21-00-740-001-A", reset:"僅在以下情況reset: DCDU顯示INVALID DATA / 按鍵無效 / ADS-C/CPDLC/AOC失效\n拉C/B 3TX1 → 拉C/B 5TX1 → 等5秒 → 壓回5TX1 → 壓回3TX1" },
-  { id:"data_link_co",     chapter:"ME-46", name:"DATA LINK COMPANY FAULT",          fcom:"Triggers when failure in AOC datalink communications.", cb:[{panel:"121VU",des:"ATSU 1",fin:"3TX1",loc:"K43"},{panel:"121VU",des:"ATSU 1/SWTG",fin:"5TX1",loc:"K42"},{panel:"121VU",des:"COM NAV/VHF/3",fin:"2RC3",loc:"L05"}], test:"TASK 46-21-00-740-001-A", reset:"拉C/B 121VU L05，等5秒，壓回" },
-  { id:"datalink_atc2",    chapter:"ME-46", name:"DATALINK ATC FAULT",               fcom:"同DATA LINK ATC FAULT。", cb:[{panel:"121VU",des:"COM NAV/VHF/3",fin:"2RC3",loc:"L05"}], test:"TASK 46-21-00-740-001-A", reset:"拉C/B 121VU L05，等5秒，壓回" },
+  { id:"data_link_co",     chapter:"ME-46", name:"DATA LINK COMPANY FAULT",          fcom:"Triggers when failure in AOC datalink communications.", cb:[{panel:"121VU",des:"ATSU 1",fin:"3TX1",loc:"K43"},{panel:"121VU",des:"ATSU 1/SWTG",fin:"5TX1",loc:"K42"},{panel:"121VU",des:"COM NAV/VHF/3",fin:"2RC3",loc:"L05"}], test:"TASK 46-21-00-740-001-A", reset:"拉C/B 121VU L05，等5秒，壓回" ,
+    mel: {
+      aircraftStatus: "NIL",
+      conditionOfDispatch: "Refer to Item 46-21-05 Company Datalink",
+      itemRef: "46-21-05", itemTitle: "Company Datalink",
+      ident: "MI-46-21-00014433.0001001 / 30 JUL 21", applicable: "ALL",
+      items: [
+        {
+          code: "46-21-05A", title: "",
+          interval: "C", nbrInstalled: "1", nbrRequired: "0", placard: "No",
+          conditions: `<span class="cond-item">(o) May be inoperative provided that company datalink communications are not required.</span>`,
+          note: "", refs: []
+        }
+      ]
+    }
+  },
+  { id:"datalink_atc2",    chapter:"ME-46", name:"DATALINK ATC FAULT",               fcom:"同DATA LINK ATC FAULT。", cb:[{panel:"121VU",des:"COM NAV/VHF/3",fin:"2RC3",loc:"L05"}], test:"TASK 46-21-00-740-001-A", reset:"拉C/B 121VU L05，等5秒，壓回" ,
+    mel: {
+      aircraftStatus: "NIL",
+      conditionOfDispatch: "Refer to Item 46-21-04 ATC Datalink",
+      itemRef: "46-21-04", itemTitle: "ATC Datalink",
+      ident: "MI-46-21-00014432.0001001 / 30 JUL 21", applicable: "ALL",
+      items: [
+        {
+          code: "46-21-04A", title: "",
+          interval: "C", nbrInstalled: "1", nbrRequired: "0", placard: "No",
+          conditions: `<span class="cond-item">(o) May be inoperative provided that ATC datalink operations are not required by ATC.</span>`,
+          note: "", refs: []
+        }
+      ]
+    }
+  },
 
   // ME-47 Inert Gas
   { id:"fuel_inerting2",   chapter:"ME-47", name:"FUEL INERTING SYS FAULT",          fcom:"Triggers when fuel inerting system failed.", cb:[{panel:"121VU",des:"IGGS/CTRL",fin:"7YA",loc:"P28"},{panel:"122VU",des:"CSAS / CTRL",fin:"1HW",loc:"U17"}], test:"TASK 21-58-00-710-002-A" },
 
   // ME-49 APU
-  { id:"apu_auto_shutdown", chapter:"ME-49", name:"APU AUTO(EMER) SHUT DOWN",        fcom:"AUTO SHUT DOWN: automatic shutdown for reason other than fire.\nEMER SHUT DOWN: APU SHUT OFF sw on Ext Power Panel pushed, APU FIRE pb pushed, or APU fire on ground.", cb:[{panel:"121VU",des:"APU/APU/CTL",fin:"2KD",loc:"L42"},{panel:"121VU",des:"APU/ECB/SPLY",fin:"1KD",loc:"L41"}], test:"TASK 49-00-00-710-010-A / TASK 49-00-00-710-009-A" },
+  { id:"apu_auto_shutdown", chapter:"ME-49", name:"APU AUTO(EMER) SHUT DOWN",        fcom:"AUTO SHUT DOWN: automatic shutdown for reason other than fire.\nEMER SHUT DOWN: APU SHUT OFF sw on Ext Power Panel pushed, APU FIRE pb pushed, or APU fire on ground.", cb:[{panel:"121VU",des:"APU/APU/CTL",fin:"2KD",loc:"L42"},{panel:"121VU",des:"APU/ECB/SPLY",fin:"1KD",loc:"L41"}], test:"TASK 49-00-00-710-010-A / TASK 49-00-00-710-009-A" ,
+    mel: {
+      aircraftStatus: "NIL",
+      conditionOfDispatch: "Refer to Item 49-10-01 Power Plant (APU)",
+      itemRef: "49-10-01", itemTitle: "Power Plant (APU)",
+      ident: "MI-49-10-00008819.0002001 / 05 MAR 25", applicable: "ALL",
+      items: [
+        {
+          code: "49-10-01A", title: "Non EDTO flight",
+          interval: "C", nbrInstalled: "1", nbrRequired: "0", placard: "Yes",
+          conditions: `<span class="cond-item">(o) May be inoperative provided that EDTO is not conducted.</span>`,
+          note: "Notify Dispatch.", refs: [{ type: "o", text: "Refer to OpsProc 49-10-01A Power Plant (APU)" }]
+        }
+      ]
+    }
+  },
 
   // ME-52 Doors
-  { id:"door_fwd_cabin",   chapter:"ME-52", name:"DOOR L(R) FWD(AFT) CABIN",         fcom:"Triggers when cabin door not detected closed by proximity sensors.", cb:[{panel:"49VU",des:"SDAC/1/SPLY",fin:"3WV",loc:"F04"},{panel:"121VU",des:"EIS/SDAC/2/SPLY",fin:"2WV",loc:"Q06"}], test:"Refer TSM" },
-  { id:"door_cargo",       chapter:"ME-52", name:"DOOR FWD(AFT)(BULK) CARGO",         fcom:"Triggers when cargo door not detected closed by proximity sensors.", cb:[{panel:"49VU",des:"L/G/LGCIU/SYS1/NORM",fin:"1GA",loc:"C09"},{panel:"121VU",des:"HYDRAULIC/LGCIU/SYS2",fin:"2GA",loc:"Q35"}], test:"TASK 32-69-00-740-001-A" },
-  { id:"door_overwng",     chapter:"ME-52", name:"DOOR L(R) FWD(AFT) OVERWING EXIT", fcom:"Triggers when overwing exit not detected closed by proximity sensors.", cb:[{panel:"49VU",des:"SDAC/1/SPLY",fin:"3WV",loc:"F04"},{panel:"121VU",des:"EIS/SDAC/2/SPLY",fin:"2WV",loc:"Q06"}], test:"Refer TSM" },
-  { id:"door_overwng_fault",chapter:"ME-52", name:"DOOR L(R) FWD(AFT) OVERWING FAULT",fcom:"Triggers when overwing exit is failed or detected in wrong position.", cb:[{panel:"122VU",des:"FLIGHT LOCK OWD",fin:"40WN",loc:"U16"}], test:"TASK 52-22-00-710-804-A" },
+  { id:"door_fwd_cabin",   chapter:"ME-52", name:"DOOR L(R) FWD(AFT) CABIN",         fcom:"Triggers when cabin door not detected closed by proximity sensors.", cb:[{panel:"49VU",des:"SDAC/1/SPLY",fin:"3WV",loc:"F04"},{panel:"121VU",des:"EIS/SDAC/2/SPLY",fin:"2WV",loc:"Q06"}], test:"Refer TSM" ,
+    mel: {
+      aircraftStatus: "False alert",
+      conditionOfDispatch: "Refer to Item 52-07-01 Cabin Door Permanently Indicated Open on the DOOR/OXY SD page",
+      itemRef: "52-07-01", itemTitle: "Cabin Door Permanently Indicated Open on the DOOR/OXY SD page",
+      ident: "MI-52-07-00008777.0001001 / 25 FEB 26", applicable: "B-18101~B-18126",
+      items: [
+        {
+          code: "52-07-01A", title: "Check of associated door and SLIDE ARMED light operative",
+          interval: "C", nbrInstalled: "8", nbrRequired: "0", placard: "No",
+          conditions: `<span class="cond-item">(o)(m) One or more cabin doors may be permanently indicated open on the DOOR/OXY SD page provided that:</span>
+<span class="cond-item"><strong>1)</strong> Each affected door is visually checked to be closed and locked before each flight, and</span>
+<span class="cond-item"><strong>2)</strong> The associated SLIDE ARMED light is operative.</span>`,
+          note: "Notify Dispatch.", refs: [{ type: "o", text: "Refer to OpsProc 52-07-01A Cabin Door Permanently Indicated Open" }]
+        }
+      ]
+    }
+  },
+  { id:"door_cargo",       chapter:"ME-52", name:"DOOR FWD(AFT)(BULK) CARGO",         fcom:"Triggers when cargo door not detected closed by proximity sensors.", cb:[{panel:"49VU",des:"L/G/LGCIU/SYS1/NORM",fin:"1GA",loc:"C09"},{panel:"121VU",des:"HYDRAULIC/LGCIU/SYS2",fin:"2GA",loc:"Q35"}], test:"TASK 32-69-00-740-001-A" ,
+    mel: {
+      aircraftStatus: "False alert",
+      conditionOfDispatch: "Refer to Item 52-07-05 Cargo Door Indication on the DOOR/OXY SD page",
+      itemRef: "52-07-05", itemTitle: "Cargo Door Indication on the DOOR/OXY SD page",
+      ident: "MI-52-07-00008782.0001001 / 30 JUL 21", applicable: "ALL",
+      items: [
+        {
+          code: "52-07-05A", title: "",
+          interval: "C", nbrInstalled: "3", nbrRequired: "0", placard: "No",
+          conditions: `<span class="cond-item">(o)(m) One or more may be inoperative provided that the associated door is visually checked to be closed and locked before each flight.</span>`,
+          note: "Notify Dispatch.", refs: [{ type: "o", text: "Refer to OpsProc 52-07-05A Cargo Door Indication on DOOR/OXY SD page" }]
+        }
+      ]
+    }
+  },
+  { id:"door_overwng",     chapter:"ME-52", name:"DOOR L(R) FWD(AFT) OVERWING EXIT", fcom:"Triggers when overwing exit not detected closed by proximity sensors.", cb:[{panel:"49VU",des:"SDAC/1/SPLY",fin:"3WV",loc:"F04"},{panel:"121VU",des:"EIS/SDAC/2/SPLY",fin:"2WV",loc:"Q06"}], test:"Refer TSM" ,
+    mel: {
+      aircraftStatus: "False alert",
+      conditionOfDispatch: "Refer to Item 52-07-03 Cabin Overwing Exit Permanently Indicated Open on the DOOR/OXY SD page",
+      itemRef: "52-07-03", itemTitle: "Cabin Overwing Exit Permanently Indicated Open on the DOOR/OXY SD page",
+      ident: "MI-52-07-00008780.0001001 / 25 FEB 26", applicable: "ALL",
+      items: [
+        {
+          code: "52-07-03A", title: "Check of associated exit with SLIDE indication in white",
+          interval: "C", nbrInstalled: "4", nbrRequired: "0", placard: "No",
+          conditions: `<span class="cond-item">(o)(m) One or more may be permanently indicated open when actually closed provided that:</span>
+<span class="cond-item"><strong>1)</strong> Each affected exit is visually checked to be closed before each flight, and</span>
+<span class="cond-item"><strong>2)</strong> The SLIDE indication is displayed in white on the DOOR/OXY SD page.</span>`,
+          note: "Notify Dispatch.", refs: [{ type: "o", text: "Refer to OpsProc 52-07-03A Cabin Overwing Exit Permanently Indicated Open" }]
+        }
+      ]
+    }
+  },
+  { id:"door_overwng_fault",chapter:"ME-52", name:"DOOR L(R) FWD(AFT) OVERWING FAULT",fcom:"Triggers when overwing exit is failed or detected in wrong position.", cb:[{panel:"122VU",des:"FLIGHT LOCK OWD",fin:"40WN",loc:"U16"}], test:"TASK 52-22-00-710-804-A" ,
+    mel: {
+      aircraftStatus: "If the associated FLIGHT LOCK ENGAGED subtitle is displayed",
+      conditionOfDispatch: "Refer to Item 52-10-09A(C) Flight Lock Actuation System",
+      itemRef: "52-10-09", itemTitle: "Flight Lock Actuation System",
+      ident: "MI-52-10-00008784.0001001 / 30 JUL 21", applicable: "ALL",
+      items: [
+        {
+          code: "52-10-09A", title: "",
+          interval: "C", nbrInstalled: "4", nbrRequired: "3", placard: "No",
+          conditions: `<span class="cond-item">(o)(m) One may be inoperative provided that the associated overwing exit is considered inoperative.</span>`,
+          note: "", refs: []
+        }
+      ]
+    }
+  },
   { id:"door_slides",      chapter:"ME-52", name:"Incorrect DOOR/SLIDES status",     fcom:"DOOR/OXY頁面顯示錯誤狀態。", cb:[{panel:"49VU",des:"COM NAV/CIDS/DIR1 ESS",fin:"150RH",loc:"G01"},{panel:"121VU",des:"COM NAV/CIDS/DIR1 NORM",fin:"151RH",loc:"M05"},{panel:"49VU",des:"COM NAV/CIDS/DIR2 ESS",fin:"157RH",loc:"G02"},{panel:"121VU",des:"COM NAV/CIDS/DIR2 NORM",fin:"156RH",loc:"M06"}], test:"ECAM CP → DOOR key確認DOOR/OXY page", reset:"依序拉C/B G01+M05+G02+M06 → 等10秒 → 壓回M05→M06→G01→G02 → 等4分鐘" },
 
   // ME-70 Engine
-  { id:"eng_fadec_sys",    chapter:"ME-70", name:"ENG 1(2) FADEC SYS FAULT",         fcom:"Triggers when FAEDC system is failed. 虛假警告可能在FADEC power-up時觸發。", cb:[{panel:"49VU",des:"ENGINE/1/FADEC A/AND EIU 1",fin:"2KS1",loc:"A04"},{panel:"121VU",des:"ENGINE/ENG1/FADEC B/AND EIU 1",fin:"4KS1",loc:"R40"}], test:"Refer TSM", reset:"若ENG MASTER仍在OFF時power-up觸發:\n- ENG MODE sel → NORM\n- 確認ENG FADEC GND PWR pb-sw → OFF\n- 拉C/B A04或A05 (49VU) for ENG1/2 FADEC channel A\n- 拉C/B R40或R41 (141VU) for ENG1/2 FADEC channel B\n- 等5秒，壓回\n若再次觸發，不得再reset，需維修", eon:"ENG2 FADEC SYS FAULT >> ENGXB-0448-N1 SPEED SNSR FAIL:\nEON ME-321-77-0001 — Post SB 73-00-0049 EEC (P/N 1020420-3-118)觀察到N1 sensor channel B在>90%N1時間歇性故障。FCS6.2暫停升級，FCS6.3開發中。出現時先執行TSM 77-11-00-810-808/809-A排故，確認為nuisance fault後依EON處置。" },
+  { id:"eng_fadec_sys",    chapter:"ME-70", name:"ENG 1(2) FADEC SYS FAULT",         fcom:"Triggers when FAEDC system is failed. 虛假警告可能在FADEC power-up時觸發。", cb:[{panel:"49VU",des:"ENGINE/1/FADEC A/AND EIU 1",fin:"2KS1",loc:"A04"},{panel:"121VU",des:"ENGINE/ENG1/FADEC B/AND EIU 1",fin:"4KS1",loc:"R40"}], test:"Refer TSM", reset:"若ENG MASTER仍在OFF時power-up觸發:\n- ENG MODE sel → NORM\n- 確認ENG FADEC GND PWR pb-sw → OFF\n- 拉C/B A04或A05 (49VU) for ENG1/2 FADEC channel A\n- 拉C/B R40或R41 (141VU) for ENG1/2 FADEC channel B\n- 等5秒，壓回\n若再次觸發，不得再reset，需維修", eon:"ENG2 FADEC SYS FAULT >> ENGXB-0448-N1 SPEED SNSR FAIL:\nEON ME-321-77-0001 — Post SB 73-00-0049 EEC (P/N 1020420-3-118)觀察到N1 sensor channel B在>90%N1時間歇性故障。FCS6.2暫停升級，FCS6.3開發中。出現時先執行TSM 77-11-00-810-808/809-A排故，確認為nuisance fault後依EON處置。" ,
+    mel: {
+      aircraftStatus: "NIL",
+      conditionOfDispatch: "Refer to Item 71-09-01 ENG 1(2) FAN COWL NOT CLSD Alert",
+      itemRef: "71-09-01", itemTitle: "ENG 1(2) FAN COWL NOT CLSD Alert",
+      ident: "MI-71-09-00016126.0001001 / 30 JUL 21", applicable: "ALL",
+      items: [
+        {
+          code: "71-09-01A", title: "",
+          interval: "C", nbrInstalled: "2", nbrRequired: "0", placard: "No",
+          conditions: `<span class="cond-item">(o) One or both may be displayed provided that the associated fan cowl door latches are checked closed before each flight.</span>`,
+          note: "", refs: [{ type: "o", text: "Refer to OpsProc 71-09-01A ENG 1(2) FAN COWL NOT CLSD Alert" }]
+        }
+      ]
+    }
+  },
   { id:"eng_fadec_fault",  chapter:"ME-70", name:"ENG 1(2) FADEC FAULT",             fcom:"Triggers when both FADEC channels are lost.", cb:[], test:"Refer TSM" },
   { id:"eng_fadec_ovht",   chapter:"ME-70", name:"ENG 1(2) FADEC OVHT",              fcom:"Triggers when FADEC is in overheat condition.", cb:[], test:"Refer TSM" },
   { id:"eng_eiu_fault",    chapter:"ME-70", name:"ENG 1(2) EIU FAULT",               fcom:"Triggers when data bus between EIU and ECU is failed.", cb:[], test:"Refer TSM", reset:"若僅在engine start後切換ENG MODE sel IGN→NORM時觸發:\nENG MODE sel NORM→IGN → 等1秒 → IGN→NORM\n注意: 僅限單側故障時可嘗試此reset" },
-  { id:"eng_fail",         chapter:"ME-70", name:"ENG 1(2) FAIL",                    fcom:"Triggers when engine core speed below idle with ENG MASTER at ON and ENG FIRE pb not pushed.", cb:[], test:"Refer TSM" },
+  { id:"eng_fail",         chapter:"ME-70", name:"ENG 1(2) FAIL",                    fcom:"Triggers when engine core speed below idle with ENG MASTER at ON and ENG FIRE pb not pushed.", cb:[], test:"Refer TSM" ,
+    mel: {
+      aircraftStatus: "NIL",
+      conditionOfDispatch: "Refer to Item 71-09-01 ENG 1(2) FAN COWL NOT CLSD Alert",
+      itemRef: "71-09-01", itemTitle: "ENG 1(2) FAN COWL NOT CLSD Alert",
+      ident: "MI-71-09-00016126.0001001 / 30 JUL 21", applicable: "ALL",
+      items: [
+        {
+          code: "71-09-01A", title: "",
+          interval: "C", nbrInstalled: "2", nbrRequired: "0", placard: "No",
+          conditions: `<span class="cond-item">(o) One or both may be displayed provided that the associated fan cowl door latches are checked closed before each flight.</span>`,
+          note: "", refs: [{ type: "o", text: "Refer to OpsProc 71-09-01A ENG 1(2) FAN COWL NOT CLSD Alert" }]
+        }
+      ]
+    }
+  },
   { id:"eng_stall",        chapter:"ME-70", name:"ENG 1(2) STALL",                   fcom:"Triggers when engine stall is detected.", cb:[], test:"Refer TSM" },
-  { id:"eng_start_fault",  chapter:"ME-70", name:"ENG 1(2) START FAULT",             fcom:"Triggers when engine start failed: No light up / engine stall / overtemperature / hung start / no N1 rotation / starter time exceeded / TLA not at idle / hot start / starter shaft shear.", cb:[], test:"Refer TSM" },
+  { id:"eng_start_fault",  chapter:"ME-70", name:"ENG 1(2) START FAULT",             fcom:"Triggers when engine start failed: No light up / engine stall / overtemperature / hung start / no N1 rotation / starter time exceeded / TLA not at idle / hot start / starter shaft shear.", cb:[], test:"Refer TSM" ,
+    mel: {
+      aircraftStatus: "NIL",
+      conditionOfDispatch: "Refer to Item 80-11-01 Start Valve",
+      itemRef: "80-11-01", itemTitle: "Start Valve",
+      ident: "MI-80-11-00008589.0009001 / 24 FEB 21", applicable: "B-18101~B-18126",
+      items: [
+        {
+          code: "80-11-01A", title: "Minimum engine shutdown time required",
+          interval: "C", nbrInstalled: "2", nbrRequired: "1", placard: "No",
+          conditions: `<span class="cond-item">(o)(m) One may be inoperative provided that:</span>
+<span class="cond-item"><strong>1)</strong> A minimum engine shutdown time is observed per AMM procedure before restart, and</span>
+<span class="cond-item"><strong>2)</strong> The associated start valve is deactivated in the closed position.</span>`,
+          note: "", refs: [{ type: "m", text: "Refer to AMM Task 80-11-00-040-001" }]
+        }
+      ]
+    }
+  },
   { id:"eng_oil_lo_pr",    chapter:"ME-70", name:"ENG 1(2) OIL LO PR",               fcom:"OIL LO PR: pressure below UPPER RED threshold (65 PSI idle → 176 PSI high thrust)\nOIL LO PR amber: between upper red and upper amber threshold (75 PSI idle → 186 PSI high thrust).", cb:[], test:"Refer TSM" },
   { id:"eng_oil_hi_temp",  chapter:"ME-70", name:"ENG 1(2) OIL HI TEMP",             fcom:"Triggers when oil temperature above caution threshold. Caution threshold: 152°C at idle → 146°C cruise → 141°C high thrust.", cb:[], test:"Refer TSM" },
-  { id:"eng_oil_chip",     chapter:"ME-70", name:"ENG 1(2) OIL CHIP DETECTED",       fcom:"Triggers when chip detected by EEC in engine oil system.", cb:[], test:"Refer TSM" },
-  { id:"eng_oil_filter",   chapter:"ME-70", name:"ENG 1(2) OIL FILTER CLOG",         fcom:"Triggers when oil filter is clogged.", cb:[], test:"Refer TSM" },
+  { id:"eng_oil_chip",     chapter:"ME-70", name:"ENG 1(2) OIL CHIP DETECTED",       fcom:"Triggers when chip detected by EEC in engine oil system.", cb:[], test:"Refer TSM" ,
+    mel: {
+      aircraftStatus: "NIL",
+      conditionOfDispatch: "Refer to Item 79-09-06 ENG 1(2) OIL CHIP DETECTED Alert",
+      itemRef: "79-09-06", itemTitle: "ENG 1(2) OIL CHIP DETECTED Alert",
+      ident: "MI-79-09-00016197.0003001 / 30 SEP 21", applicable: "ALL",
+      items: [
+        {
+          code: "79-09-06A", title: "",
+          interval: "A", nbrInstalled: "2", nbrRequired: "1", placard: "No",
+          conditions: `<span class="cond-item">One may be displayed on the EWD for a maximum of 5 flights or 10 flight hours, whichever occurs first.</span>`,
+          note: "Notify Dispatch.", refs: []
+        }
+      ]
+    }
+  },
+  { id:"eng_oil_filter",   chapter:"ME-70", name:"ENG 1(2) OIL FILTER CLOG",         fcom:"Triggers when oil filter is clogged.", cb:[], test:"Refer TSM" ,
+    mel: {
+      aircraftStatus: "False alert",
+      conditionOfDispatch: "Refer to Item 79-09-02 ENG 1(2) OIL FILTER CLOG Alert",
+      itemRef: "79-09-02", itemTitle: "ENG 1(2) OIL FILTER CLOG Alert",
+      ident: "MI-79-09-00008601.0005001 / 30 JUL 21", applicable: "ALL",
+      items: [
+        {
+          code: "79-09-02A", title: "Filter replacement and inspection",
+          interval: "C", nbrInstalled: "2", nbrRequired: "1", placard: "No",
+          conditions: `<span class="cond-item">(m) One may be displayed provided that:</span>
+<span class="cond-item"><strong>1)</strong> The alert is confirmed to be false by troubleshooting, and</span>
+<span class="cond-item"><strong>2)</strong> The associated filter is replaced before the first MEL dispatch.</span>`,
+          note: "", refs: [{ type: "m", text: "Refer to AMM Task 79-22-00-200-001" }]
+        }
+      ]
+    }
+  },
   { id:"eng_high_vib",     chapter:"ME-70", name:"ENG 1(2) HIGH VIBRATION",          fcom:"Triggers when N1 vibration >5 units or N2 vibration >5 units.", cb:[], test:"Refer TSM" },
-  { id:"eng_rev_fault",    chapter:"ME-70", name:"ENG 1(2) REV FAULT",               fcom:"Triggers when thrust reverser on one engine is failed.", cb:[], test:"Refer TSM" },
-  { id:"eng_rev_locked",   chapter:"ME-70", name:"ENG 1(2) REV LOCKED",              fcom:"Triggers when reverser system failed in stowed position.", cb:[], test:"Refer TSM" },
-  { id:"eng_rev_unlocked", chapter:"ME-70", name:"ENG 1(2) REVERSE UNLOCKED",        fcom:"Triggers when one or more reverser doors not locked in stowed position in flight or on ground with no deploy order.", cb:[], test:"Refer TSM" },
-  { id:"eng_fuel_filter",  chapter:"ME-70", name:"ENG 1(2) FUEL FILTER CLOG",        fcom:"Triggers when fuel filter is clogged.", cb:[], test:"Refer TSM" },
-  { id:"eng_fuel_leak",    chapter:"ME-70", name:"ENG 1(2) FUEL LEAK",               fcom:"Triggers when abnormal difference among engines detected in fuel flow or fuel used.", cb:[], test:"Refer TSM" },
+  { id:"eng_rev_fault",    chapter:"ME-70", name:"ENG 1(2) REV FAULT",               fcom:"Triggers when thrust reverser on one engine is failed.", cb:[], test:"Refer TSM" ,
+    mel: {
+      aircraftStatus: "NIL",
+      conditionOfDispatch: "Refer to Item 78-30-01 Thrust Reverser",
+      itemRef: "78-30-01", itemTitle: "Thrust Reverser",
+      ident: "MI-78-30-00008603.0009001 / 28 AUG 23", applicable: "B-18101~B-18118",
+      items: [
+        {
+          code: "78-30-01A", title: "",
+          interval: "C", nbrInstalled: "2", nbrRequired: "0", placard: "Yes",
+          conditions: `<span class="cond-item">(o)(m) One or both may be inoperative provided that:</span>
+<span class="cond-item"><strong>1)</strong> The AOT reference A32N030-23 is not applicable, and</span>
+<span class="cond-item"><strong>2)</strong> The associated reverser is stowed and deactivated, and</span>
+<span class="cond-item"><strong>3)</strong> EDTO is not conducted if both are inoperative.</span>`,
+          note: "Notify Dispatch.", refs: [{ type: "o", text: "Refer to OpsProc 78-30-01A Thrust Reverser" }, { type: "m", text: "Refer to AMM Task 78-30-00-040-001" }]
+        }
+      ]
+    }
+  },
+  { id:"eng_rev_locked",   chapter:"ME-70", name:"ENG 1(2) REV LOCKED",              fcom:"Triggers when reverser system failed in stowed position.", cb:[], test:"Refer TSM" ,
+    mel: {
+      aircraftStatus: "NIL",
+      conditionOfDispatch: "Refer to Item 78-30-04 Thrust Reverser Door Tertiary Lock",
+      itemRef: "78-30-04", itemTitle: "Thrust Reverser Door Tertiary Lock",
+      ident: "MI-78-30-00008606.0004001 / 30 JUL 21", applicable: "ALL",
+      items: [
+        {
+          code: "78-30-04A", title: "Thrust Reverser considered inoperative",
+          interval: "C", nbrInstalled: "4", nbrRequired: "0", placard: "No",
+          conditions: `<span class="cond-item">One or more may be inoperative provided that the associated thrust reverser is considered inoperative.</span>
+<span class="cond-item">Refer to Item 78-30-01 Thrust Reverser</span>`,
+          note: "Notify Dispatch.", refs: []
+        }
+      ]
+    }
+  },
+  { id:"eng_rev_unlocked", chapter:"ME-70", name:"ENG 1(2) REVERSE UNLOCKED",        fcom:"Triggers when one or more reverser doors not locked in stowed position in flight or on ground with no deploy order.", cb:[], test:"Refer TSM" ,
+    mel: {
+      aircraftStatus: "NIL",
+      conditionOfDispatch: "Refer to Item 78-30-04 Thrust Reverser Door Tertiary Lock",
+      itemRef: "78-30-04", itemTitle: "Thrust Reverser Door Tertiary Lock",
+      ident: "MI-78-30-00008606.0004001 / 30 JUL 21", applicable: "ALL",
+      items: [
+        {
+          code: "78-30-04A", title: "Thrust Reverser considered inoperative",
+          interval: "C", nbrInstalled: "4", nbrRequired: "0", placard: "No",
+          conditions: `<span class="cond-item">One or more may be inoperative provided that the associated thrust reverser is considered inoperative.</span>
+<span class="cond-item">Refer to Item 78-30-01 Thrust Reverser</span>`,
+          note: "Notify Dispatch.", refs: []
+        }
+      ]
+    }
+  },
+  { id:"eng_fuel_filter",  chapter:"ME-70", name:"ENG 1(2) FUEL FILTER CLOG",        fcom:"Triggers when fuel filter is clogged.", cb:[], test:"Refer TSM" ,
+    mel: {
+      aircraftStatus: "NIL",
+      conditionOfDispatch: "Refer to Item 73-09-01 ENG 1(2) FUEL FILTER CLOG Alert",
+      itemRef: "73-09-01", itemTitle: "ENG 1(2) FUEL FILTER CLOG Alert",
+      ident: "MI-73-09-00008667.0007001 / 30 JUL 21", applicable: "ALL",
+      items: [
+        {
+          code: "73-09-01A", title: "",
+          interval: "C", nbrInstalled: "2", nbrRequired: "1", placard: "No",
+          conditions: `<span class="cond-item">(m) One may be displayed on the EWD provided that:</span>
+<span class="cond-item"><strong>1)</strong> The alert is confirmed to be false by troubleshooting, and</span>
+<span class="cond-item"><strong>2)</strong> The associated filter is replaced before the first MEL dispatch and then every 50 flight hours.</span>`,
+          note: "", refs: [{ type: "m", text: "Refer to AMM Task 73-11-00-200-001" }]
+        }
+      ]
+    }
+  },
+  { id:"eng_fuel_leak",    chapter:"ME-70", name:"ENG 1(2) FUEL LEAK",               fcom:"Triggers when abnormal difference among engines detected in fuel flow or fuel used.", cb:[], test:"Refer TSM" ,
+    mel: {
+      aircraftStatus: "NIL",
+      conditionOfDispatch: "Refer to Item 73-09-04 ENG 1(2) FUEL SENSOR FAULT Alert",
+      itemRef: "73-09-04", itemTitle: "ENG 1(2) FUEL SENSOR FAULT Alert",
+      ident: "MI-73-09-00016153.0006001 / 30 JUL 21", applicable: "ALL",
+      items: [
+        {
+          code: "73-09-04A", title: "FUEL FILTER SENSOR subtitle - no filter replacement",
+          interval: "A", nbrInstalled: "2", nbrRequired: "1", placard: "No",
+          conditions: `<span class="cond-item">One may be displayed for a maximum of 8 flights or 16 flight hours, whichever occurs first.</span>`,
+          note: "Notify Dispatch.", refs: []
+        },
+        {
+          code: "73-09-04B", title: "Other subtitle",
+          interval: "C", nbrInstalled: "2", nbrRequired: "1", placard: "No",
+          conditions: `<span class="cond-item">One may be displayed provided that troubleshooting confirms a false alert.</span>`,
+          note: "", refs: []
+        }
+      ]
+    }
+  },
   { id:"eng_heat_sys",     chapter:"ME-70", name:"ENG 1(2) HEAT SYS FAULT",          fcom:"Triggers when heat management system failed (fuel/oil cooling bypass valve failed, FMV sensor lost).", cb:[], test:"Refer TSM" },
   { id:"eng_hot_air_leak", chapter:"ME-70", name:"ENG 1(2) HOT AIR LEAK",            fcom:"Triggers when hot air leak (burst duct) detected in engine compartment.", cb:[], test:"Refer TSM" },
   { id:"eng_sensor_fault", chapter:"ME-70", name:"ENG 1(2) SENSOR FAULT",            fcom:"Triggers when N1, N2, T2, P2, burner pressure or ambient pressure sensor lost.", cb:[{panel:"49VU",des:"ENGINE/1/FADEC A/AND EIU 1",fin:"2KS1",loc:"A04"},{panel:"121VU",des:"ENGINE/ENG1/FADEC B/AND EIU 1",fin:"4KS1",loc:"R40"}], test:"Refer TSM\n若ECAM顯示ENG 1(2) SENSOR FAULT-N1 DEGRADED MODE但無maintenance message:\n確認ADIRU已上電\n執行EEC power cycle: ENG MASTER OFF → ENG MODE NORM → 拉EEC C/Bs → 等5秒 → 壓回 → ENG MODE IGN → 待ECC啟動後改回NORM" },
-  { id:"eng_turb_cool",    chapter:"ME-70", name:"ENG 1(2) TURB COOL FAULT",         fcom:"Triggers when Turbine Active Clearance Control (ACC) valve failed in closed position.", cb:[], test:"Refer TSM" },
+  { id:"eng_turb_cool",    chapter:"ME-70", name:"ENG 1(2) TURB COOL FAULT",         fcom:"Triggers when Turbine Active Clearance Control (ACC) valve failed in closed position.", cb:[], test:"Refer TSM" ,
+    mel: {
+      aircraftStatus: "NIL",
+      conditionOfDispatch: "Refer to Item 75-24-01 Turbine Active Clearance Control Valve",
+      itemRef: "75-24-01", itemTitle: "Turbine Active Clearance Control Valve (TCC/TACC)",
+      ident: "MI-75-24-00008647.0003001 / 30 JUL 21", applicable: "ALL",
+      items: [
+        {
+          code: "75-24-01A", title: "",
+          interval: "B", nbrInstalled: "2", nbrRequired: "1", placard: "No",
+          conditions: `<span class="cond-item">(o) One may be inoperative in the closed position provided that the associated engine takeoff EGT margin is above 16 deg C.</span>`,
+          note: "Notify Dispatch.", refs: [{ type: "o", text: "Refer to OpsProc 75-24-01A TCC Valve" }]
+        }
+      ]
+    }
+  },
   { id:"eng_sys_fault",    chapter:"ME-70", name:"ENG 1(2) SYSTEM FAULT",            fcom:"Triggers when closure of 6th stage bleed valves or Turbine Case Cooling (TCC) is failed.", cb:[], test:"Refer TSM" },
   { id:"eng_ctl_fault",    chapter:"ME-70", name:"ENG 1(2) CTL SYS FAULT",           fcom:"Triggers when failure preventing EEC from controlling engine, or TCM detected.", cb:[], test:"Refer TSM" },
   { id:"eng_all_fail",     chapter:"ME-70", name:"ENG ALL ENGINES FAILURE",          fcom:"Triggers when all engines failed in flight.", cb:[], test:"Refer TSM" },
   { id:"eng_dual_cooling", chapter:"ME-70", name:"ENG DUAL COOLING NOT AVAIL",       fcom:"Triggers on ground with dual cooling armed but not available (outside envelope or low starter air pressure).", cb:[], test:"Refer TSM" },
-  { id:"eng_ga_soft",      chapter:"ME-70", name:"ENG GA SOFT FAULT",                fcom:"Soft go-around function is lost.", cb:[], test:"Refer TSM" },
+  { id:"eng_ga_soft",      chapter:"ME-70", name:"ENG GA SOFT FAULT",                fcom:"Soft go-around function is lost.", cb:[], test:"Refer TSM" ,
+    mel: {
+      aircraftStatus: "NIL",
+      conditionOfDispatch: "Refer to Item 22-10-09 Soft Go-Around Function",
+      itemRef: "22-10-09", itemTitle: "Soft Go-Around Function",
+      ident: "MI-22-10-00016095.0001001 / 30 JUL 21", applicable: "ALL",
+      items: [
+        {
+          code: "22-10-09A", title: "",
+          interval: "C", nbrInstalled: "1", nbrRequired: "0", placard: "No",
+          conditions: `<span class="cond-item">(o) May be inoperative.</span>`,
+          note: "", refs: []
+        }
+      ]
+    }
+  },
   { id:"lightning_strike", chapter:"OTHER", name:"Lightning Strike",                  fcom:"執行雷擊後檢查，參考多個SRM/AMM任務。", cb:[], test:"AMM 53-15-11-200-001-A Radome\nSRM 52-10-00-283-004 Passenger Doors Burn Mark\nSRM 53-11-11-283-010 FR1-FR24 Burn Mark\n(各機身段均有對應SRM ADL任務)" },
   { id:"fmgc_ver_dis",     chapter:"OTHER", name:"AUTO FLT FMGC VERSIONS DISAGREE", fcom:"N/A", cb:[], test:"檢查FMGC 1+2硬體及軟體P/N是否一致" },
-  { id:"fac_ver_dis",      chapter:"OTHER", name:"AUTO FLT FAC VERSIONS DISAGREE",  fcom:"N/A", cb:[], test:"TASK 22-66-00-810-912-A / 檢查FAC 1+2硬體及軟體P/N" },
+  { id:"fac_ver_dis",      chapter:"OTHER", name:"AUTO FLT FAC VERSIONS DISAGREE",  fcom:"N/A", cb:[], test:"TASK 22-66-00-810-912-A / 檢查FAC 1+2硬體及軟體P/N" ,
+    mel: {
+      aircraftStatus: "NIL",
+      conditionOfDispatch: "Refer to Item 22-81-03-01 FCU Channel",
+      itemRef: "22-81-03-01", itemTitle: "FCU Channel",
+      ident: "MI-22-81-03-00007571.0002001 / 05 MAR 25", applicable: "ALL",
+      items: [
+        {
+          code: "22-81-03-01A", title: "Non EDTO flight",
+          interval: "C", nbrInstalled: "2", nbrRequired: "1", placard: "No",
+          conditions: `<span class="cond-item">(o) One channel may be inoperative provided that:</span>
+<span class="cond-item"><strong>1)</strong> EDTO is not conducted, and</span>
+<span class="cond-item"><strong>2)</strong> Two RMPs, all DUs, both RAs, both LGCIUs, both FACs, both CPCs and both ADRSs are operative.</span>`,
+          note: "", refs: [{ type: "o", text: "Refer to OpsProc 22-81-03-01A FCU Channel" }]
+        },
+        {
+          code: "22-81-03-01B", title: "Both channels inoperative (ferry)",
+          interval: "A", nbrInstalled: "2", nbrRequired: "0", placard: "No",
+          conditions: `<span class="cond-item">Both channels may be inoperative for ferry to where repair can be made. All autopilot and autothrust functions are considered inoperative.</span>`,
+          note: "", refs: []
+        }
+      ]
+    }
+  },
 ];
 
 // ============================================================
@@ -1377,14 +1905,11 @@ function showChapter(code) {
         <div class="detail-me-tag">${ch.code}</div>
         <div>
           <div class="detail-title">${ch.title}</div>
-          <div class="detail-sub">${chAlerts.length} ALERT(S) — CLICK SIDEBAR ITEM TO VIEW</div>
+          <div class="detail-sub">${chAlerts.length} ALERT(S) — SELECT FROM SIDEBAR</div>
         </div>
       </div>
-      <div class="alert-grid" id="alertGrid_${code}">
-        <!-- Cards injected on demand -->
-        <div style="padding:30px;text-align:center;font-family:'Share Tech Mono',monospace;font-size:13px;color:var(--text-dim);letter-spacing:2px;">
-          ← SELECT AN ALERT FROM THE SIDEBAR
-        </div>
+      <div class="alert-grid">
+        ${chAlerts.map(a => renderAlertCard(a)).join('')}
       </div>
     </div>
   `;
@@ -1398,34 +1923,23 @@ function showChapter(code) {
 function showAlert(alertId, fromSearch) {
   const a = alerts.find(x => x.id === alertId);
   if (!a) return;
-  
   setActiveSidebarItem(alertId);
-  
-  // Ensure chapter page is showing
   const ch = chapters.find(c => c.code === a.chapter);
-  const chapterPage = document.getElementById('main-chapter');
-  
-  // Check if chapter page is already showing this chapter
-  const existingGrid = document.getElementById('alertGrid_' + a.chapter);
-  if (!existingGrid) {
-    showChapter(a.chapter);
-  }
-  
-  // Now render only the selected card in the grid
-  setTimeout(() => {
-    const grid = document.getElementById('alertGrid_' + a.chapter);
-    if (grid) {
-      grid.innerHTML = renderAlertCard(a);
-      // Update chapter subtitle
-      const sub = grid.closest('.detail-page').querySelector('.detail-sub');
-      if (sub) sub.textContent = a.name + ' — CLICK HEADER TO COLLAPSE';
-      const card = document.getElementById('card_' + alertId);
-      if (card) {
-        card.classList.add('open');
-        document.getElementById('mainContent').scrollTop = 0;
-      }
-    }
-  }, 30);
+  const content = document.getElementById('main-chapter');
+  content.innerHTML = '<div class="detail-page">'
+    + '<div class="detail-back" onclick="navHome()">← BACK TO HOME</div>'
+    + '<div class="detail-header">'
+    + '<div class="detail-me-tag">' + a.chapter + '</div>'
+    + '<div><div class="detail-title">' + (ch ? ch.title : a.chapter) + '</div>'
+    + '<div class="detail-sub">' + a.name + '</div></div></div>'
+    + '<div class="alert-grid" id="alertGrid_' + a.chapter + '"></div></div>';
+  document.getElementById('main-home').classList.remove('active');
+  document.getElementById('main-chapter').classList.add('active');
+  document.getElementById('main-search').classList.remove('active');
+  document.getElementById('mainContent').scrollTop = 0;
+  document.getElementById('alertGrid_' + a.chapter).innerHTML = renderAlertCard(a);
+  const card = document.getElementById('card_' + alertId);
+  if (card) card.classList.add('open');
 }
 
 // ============================================================
@@ -1456,98 +1970,17 @@ function renderAlertCard(a) {
   const fcomText = a.fcom ? a.fcom.replace(/\n/g,'<br>') : 'Refer FCOM';
   const testText = a.test ? a.test.replace(/\n/g,'<br>') : 'Refer TSM';
   
-  // MEL section
   const melHtml = a.mel ? renderMelSection(a.mel) : '';
-  
-  return `
-    <div class="alert-card" id="card_${a.id}">
-      <div class="alert-card-header" onclick="toggleCard('${a.id}')">
-        <div class="alert-name">${a.name}</div>
-        <div class="alert-chevron">▶</div>
-      </div>
-      <div class="alert-body">
-        <div class="info-section">
-          <div class="info-section-label">FCOM — TRIGGER CONDITION</div>
-          <div class="fcom-box">${fcomText}</div>
-        </div>
-        
-        <div class="info-section">
-          <div class="info-section-label">CIRCUIT BREAKERS</div>
-          ${cbHtml}
-        </div>
-        
-        <div class="info-section">
-          <div class="info-section-label">TEST / BITE</div>
-          <div class="test-box">${testText}</div>
-        </div>
-        
-        ${a.reset ? `
-        <div class="info-section">
-          <div class="info-section-label" style="color:var(--amber)">RESET PROCEDURE</div>
-          <div class="reset-box">${a.reset.replace(/\n/g,'<br>')}</div>
-        </div>` : ''}
-        
-        ${a.eon ? `
-        <div class="info-section">
-          <div class="info-section-label" style="color:var(--red)">⚠ EON / TFU</div>
-          <div class="eon-box">${a.eon.replace(/\n/g,'<br>')}</div>
-        </div>` : ''}
-        
-        ${melHtml}
-      </div>
-    </div>
-  `;
-}
-
-function renderMelSection(mel) {
-  let subItemsHtml = mel.items.map(item => `
-    <div class="mel-sub-item">
-      <div class="mel-sub-item-header">${item.code} — ${item.title}</div>
-      <div class="mel-item-box">
-        <table class="mel-dispatch-table">
-          <thead><tr><th>REPAIR INTERVAL</th><th>NBR INSTALLED</th><th>NBR REQUIRED</th><th>PLACARD</th></tr></thead>
-          <tbody><tr>
-            <td class="interval">${item.interval}</td>
-            <td>${item.nbrInstalled}</td>
-            <td>${item.nbrRequired}</td>
-            <td>${item.placard}</td>
-          </tr></tbody>
-        </table>
-        <div class="mel-conditions">
-          ${item.conditions.replace(/\n/g,'<br>')}
-        </div>
-        ${item.note ? `<div class="mel-note">📋 NOTE: ${item.note}</div>` : ''}
-        ${item.refs ? item.refs.map(r => `<div class="mel-ref-line"><span>(${r.type})</span> ${r.text}</div>`).join('') : ''}
-      </div>
-    </div>
-  `).join('');
-
-  return `
-    <div class="info-section">
-      <div class="info-section-label" style="color:var(--blue)">📋 MEL REFERENCE</div>
-      <div class="mel-section">
-        <div class="mel-section-title">MEL ENTRIES — AIRCRAFT STATUS &amp; CONDITION OF DISPATCH</div>
-        <div class="mel-entries-box">
-          <div class="mel-entries-row">
-            <div>
-              <div class="mel-entries-col-header">AIRCRAFT STATUS</div>
-              <div class="mel-entries-val">${mel.aircraftStatus}</div>
-            </div>
-            <div>
-              <div class="mel-entries-col-header">CONDITION OF DISPATCH</div>
-              <div class="mel-entries-val">${mel.conditionOfDispatch}</div>
-            </div>
-          </div>
-        </div>
-        <div class="mel-section-title">MEL ITEMS — <span style="color:var(--amber)">${mel.itemRef}</span></div>
-        <div class="mel-item-box" style="padding-bottom:4px;">
-          <div class="mel-item-header">${mel.itemRef} — ${mel.itemTitle}</div>
-          <div class="mel-item-ident">Ident.: ${mel.ident} &nbsp;|&nbsp; Applicable to: ${mel.applicable}</div>
-        </div>
-        ${subItemsHtml}
-      </div>
-    </div>
-  `;
+  return '<div class="alert-card" id="card_' + a.id + '">'
+    + '<div class="alert-card-header" onclick="toggleCard(\''+a.id+'\')"><div class="alert-name">' + a.name + '</div><div class="alert-chevron">▶</div></div>'
+    + '<div class="alert-body">'
+    + '<div class="info-section"><div class="info-section-label">FCOM — TRIGGER CONDITION</div><div class="fcom-box">' + fcomText + '</div></div>'
+    + '<div class="info-section"><div class="info-section-label">CIRCUIT BREAKERS</div>' + cbHtml + '</div>'
+    + '<div class="info-section"><div class="info-section-label">TEST / BITE</div><div class="test-box">' + testText + '</div></div>'
+    + (a.reset ? '<div class="info-section"><div class="info-section-label" style="color:var(--amber)">RESET PROCEDURE</div><div class="reset-box">' + a.reset.replace(/\n/g,'<br>') + '</div></div>' : '')
+    + (a.eon ? '<div class="info-section"><div class="info-section-label" style="color:var(--red)">⚠ EON / TFU</div><div class="eon-box">' + a.eon.replace(/\n/g,'<br>') + '</div></div>' : '')
+    + melHtml
+    + '</div></div>';
 }
 
 function toggleCard(alertId) {
@@ -1598,17 +2031,17 @@ function renderHome() {
   return `
     <div class="home-page">
       <div style="margin-bottom:20px;">
-        <div style="font-family:'Share Tech Mono',monospace;font-size:11px;letter-spacing:3px;color:var(--text-dim);margin-bottom:8px;">AIRCRAFT FLEET</div>
+        <div style="font-family:'Share Tech Mono',monospace;font-size:9px;letter-spacing:3px;color:var(--text-dim);margin-bottom:8px;">AIRCRAFT FLEET</div>
         <div style="background:var(--panel);border:1px solid var(--border);overflow:auto;">
-          <table style="width:100%;border-collapse:collapse;font-family:'Share Tech Mono',monospace;font-size:13px;">
+          <table style="width:100%;border-collapse:collapse;font-family:'Share Tech Mono',monospace;font-size:11px;">
             <thead>
               <tr style="background:rgba(245,166,35,0.08);">
-                <th style="padding:8px 12px;text-align:left;color:var(--amber);font-size:11px;letter-spacing:2px;border-bottom:1px solid var(--amber-dim);">REG</th>
-                <th style="padding:8px 12px;text-align:left;color:var(--amber);font-size:11px;letter-spacing:2px;border-bottom:1px solid var(--amber-dim);">MSN</th>
-                <th style="padding:8px 12px;text-align:left;color:var(--amber);font-size:11px;letter-spacing:2px;border-bottom:1px solid var(--amber-dim);">MODEL</th>
-                <th style="padding:8px 12px;text-align:left;color:var(--amber);font-size:11px;letter-spacing:2px;border-bottom:1px solid var(--amber-dim);">ENGINE</th>
-                <th style="padding:8px 12px;text-align:left;color:var(--amber);font-size:11px;letter-spacing:2px;border-bottom:1px solid var(--amber-dim);">STD</th>
-                <th style="padding:8px 12px;text-align:left;color:var(--amber);font-size:11px;letter-spacing:2px;border-bottom:1px solid var(--amber-dim);">WT</th>
+                <th style="padding:8px 12px;text-align:left;color:var(--amber);font-size:9px;letter-spacing:2px;border-bottom:1px solid var(--amber-dim);">REG</th>
+                <th style="padding:8px 12px;text-align:left;color:var(--amber);font-size:9px;letter-spacing:2px;border-bottom:1px solid var(--amber-dim);">MSN</th>
+                <th style="padding:8px 12px;text-align:left;color:var(--amber);font-size:9px;letter-spacing:2px;border-bottom:1px solid var(--amber-dim);">MODEL</th>
+                <th style="padding:8px 12px;text-align:left;color:var(--amber);font-size:9px;letter-spacing:2px;border-bottom:1px solid var(--amber-dim);">ENGINE</th>
+                <th style="padding:8px 12px;text-align:left;color:var(--amber);font-size:9px;letter-spacing:2px;border-bottom:1px solid var(--amber-dim);">STD</th>
+                <th style="padding:8px 12px;text-align:left;color:var(--amber);font-size:9px;letter-spacing:2px;border-bottom:1px solid var(--amber-dim);">WT</th>
               </tr>
             </thead>
             <tbody>${acRows}</tbody>
@@ -1617,15 +2050,15 @@ function renderHome() {
       </div>
 
       <div style="margin-bottom:20px;">
-        <div style="font-family:'Share Tech Mono',monospace;font-size:11px;letter-spacing:3px;color:var(--text-dim);margin-bottom:8px;">POTABLE WATER</div>
+        <div style="font-family:'Share Tech Mono',monospace;font-size:9px;letter-spacing:3px;color:var(--text-dim);margin-bottom:8px;">POTABLE WATER</div>
         <table class="water-table">
           <tr><td>≥ 3.5 小時</td><td>3/4</td></tr>
           <tr><td>&lt; 3.5 小時</td><td>1/2</td></tr>
         </table>
-        <div style="font-family:'Share Tech Mono',monospace;font-size:12px;color:var(--text-dim);margin-top:6px;">* CABIN ITEM REPAIR PER CMM: EON ME-321-25-0001 R1</div>
+        <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--text-dim);margin-top:6px;">* CABIN ITEM REPAIR PER CMM: EON ME-321-25-0001 R1</div>
       </div>
 
-      <div style="background:rgba(224,82,82,0.08);border:1px solid rgba(224,82,82,0.3);padding:12px 16px;margin-bottom:20px;font-family:'Share Tech Mono',monospace;font-size:13px;color:var(--red);letter-spacing:1px;line-height:1.8;">
+      <div style="background:rgba(224,82,82,0.08);border:1px solid rgba(224,82,82,0.3);padding:12px 16px;margin-bottom:20px;font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--red);letter-spacing:1px;line-height:1.8;">
         ⚠ 這不是排故手冊！這不是排故手冊！這不是排故手冊！<br>
         僅將可能相關的C/B或TEST列出，方便於毫無頭緒時參考。<br>
         發動機故障請謹慎處理，維修請依據TSM！<br>
@@ -1633,7 +2066,7 @@ function renderHome() {
         <span style="color:var(--amber)">檔名「病急亂投醫」，顧名思義……請自行斟酌服用！</span>
       </div>
 
-      <div style="font-family:'Share Tech Mono',monospace;font-size:11px;letter-spacing:3px;color:var(--text-dim);margin-bottom:12px;">ECAM ALERT CHAPTERS</div>
+      <div style="font-family:'Share Tech Mono',monospace;font-size:9px;letter-spacing:3px;color:var(--text-dim);margin-bottom:12px;">ECAM ALERT CHAPTERS</div>
       <div class="home-grid">
         ${chCards}
       </div>
@@ -1718,132 +2151,72 @@ function init() {
   });
 }
 
-window.addEventListener('DOMContentLoaded', init);
 
-// ============================================================
-// DAY / NIGHT MODE
-// ============================================================
+function renderMelSection(mel) {
+  const subItems = mel.items.map(function(item) {
+    const refsHtml = item.refs && item.refs.length ? item.refs.map(function(r){ return '<div class="mel-ref-line"><span>('+r.type+')</span> '+r.text+'</div>'; }).join('') : '';
+    return '<div class="mel-sub-item">'
+      +'<div class="mel-sub-item-header">'+item.code+(item.title?' — '+item.title:'')+'</div>'
+      +'<div class="mel-item-box">'
+      +'<table class="mel-dispatch-table"><thead><tr><th>REPAIR INTERVAL</th><th>NBR INSTALLED</th><th>NBR REQUIRED</th><th>PLACARD</th></tr></thead>'
+      +'<tbody><tr><td class="interval">'+item.interval+'</td><td>'+item.nbrInstalled+'</td><td>'+item.nbrRequired+'</td><td>'+item.placard+'</td></tr></tbody></table>'
+      +'<div class="mel-conditions">'+item.conditions+'</div>'
+      +(item.note ? '<div class="mel-note">NOTE: '+item.note+'</div>' : '')
+      +refsHtml+'</div></div>';
+  }).join('');
+  return '<div class="info-section">'
+    +'<div class="info-section-label" style="color:var(--blue)">&#128203; MEL REFERENCE</div>'
+    +'<div class="mel-section">'
+    +'<div class="mel-section-title">MEL ENTRIES — AIRCRAFT STATUS &amp; CONDITION OF DISPATCH</div>'
+    +'<div class="mel-entries-box"><div class="mel-entries-row">'
+    +'<div><div class="mel-entries-col-header">AIRCRAFT STATUS</div><div class="mel-entries-val">'+mel.aircraftStatus+'</div></div>'
+    +'<div><div class="mel-entries-col-header">CONDITION OF DISPATCH</div><div class="mel-entries-val">'+mel.conditionOfDispatch+'</div></div>'
+    +'</div></div>'
+    +'<div class="mel-section-title">MEL ITEMS — <span style="color:var(--amber)">'+mel.itemRef+'</span></div>'
+    +'<div class="mel-item-box" style="padding-bottom:4px;">'
+    +'<div class="mel-item-header">'+mel.itemRef+' — '+mel.itemTitle+'</div>'
+    +'<div class="mel-item-ident">Ident.: '+mel.ident+' | Applicable to: '+mel.applicable+'</div>'
+    +'</div>'+subItems+'</div></div>';
+}
+
 function toggleDayMode() {
-  const body = document.body;
-  const btn = document.getElementById('dayToggleBtn');
-  if (body.classList.contains('day-mode')) {
-    body.classList.remove('day-mode');
-    btn.textContent = '☀ DAY MODE';
-    localStorage.setItem('colorMode', 'night');
-  } else {
-    body.classList.add('day-mode');
-    btn.textContent = '🌙 NIGHT MODE';
-    localStorage.setItem('colorMode', 'day');
-  }
+  var isDay = document.body.classList.toggle('day-mode');
+  document.getElementById('dayToggleBtn').textContent = isDay ? '\u{1F319} NIGHT MODE' : '\u2600 DAY MODE';
+  localStorage.setItem('colorMode', isDay ? 'day' : 'night');
 }
-
-(function applyStoredMode() {
-  if (localStorage.getItem('colorMode') === 'day') {
+(function(){
+  if (localStorage.getItem('colorMode')==='day') {
     document.body.classList.add('day-mode');
-    const btn = document.getElementById('dayToggleBtn');
-    if (btn) btn.textContent = '🌙 NIGHT MODE';
+    var btn=document.getElementById('dayToggleBtn');
+    if(btn) btn.textContent='\u{1F319} NIGHT MODE';
   }
 })();
 
-// ============================================================
-// RESIZER
-// ============================================================
-(function initResizer() {
-  const resizer = document.getElementById('resizer');
-  const sidebar = document.getElementById('sidebar');
-  if (!resizer || !sidebar) return;
-  let startX, startWidth, dragging = false;
-
-  resizer.addEventListener('mousedown', function(e) {
-    dragging = true;
-    startX = e.clientX;
-    startWidth = sidebar.offsetWidth;
-    resizer.classList.add('dragging');
-    document.body.style.userSelect = 'none';
-    document.body.style.cursor = 'col-resize';
-  });
-
-  document.addEventListener('mousemove', function(e) {
-    if (!dragging) return;
-    const delta = e.clientX - startX;
-    const newWidth = Math.min(480, Math.max(140, startWidth + delta));
-    sidebar.style.width = newWidth + 'px';
-  });
-
-  document.addEventListener('mouseup', function() {
-    if (!dragging) return;
-    dragging = false;
-    resizer.classList.remove('dragging');
-    document.body.style.userSelect = '';
-    document.body.style.cursor = '';
-    localStorage.setItem('sidebarWidth', sidebar.offsetWidth);
-  });
-
-  // Touch support
-  resizer.addEventListener('touchstart', function(e) {
-    dragging = true;
-    startX = e.touches[0].clientX;
-    startWidth = sidebar.offsetWidth;
-    resizer.classList.add('dragging');
-  }, {passive: true});
-
-  document.addEventListener('touchmove', function(e) {
-    if (!dragging) return;
-    const delta = e.touches[0].clientX - startX;
-    const newWidth = Math.min(480, Math.max(140, startWidth + delta));
-    sidebar.style.width = newWidth + 'px';
-  }, {passive: true});
-
-  document.addEventListener('touchend', function() {
-    if (!dragging) return;
-    dragging = false;
-    resizer.classList.remove('dragging');
-    localStorage.setItem('sidebarWidth', sidebar.offsetWidth);
-  });
-
-  // Restore saved width
-  const saved = localStorage.getItem('sidebarWidth');
-  if (saved) sidebar.style.width = parseInt(saved) + 'px';
+(function initResizer(){
+  var resizer=document.getElementById('resizer');
+  var sidebar=document.getElementById('sidebar');
+  if(!resizer||!sidebar) return;
+  var startX,startW,dragging=false;
+  function onStart(x){dragging=true;startX=x;startW=sidebar.offsetWidth;resizer.classList.add('dragging');document.body.style.userSelect='none';document.body.style.cursor='col-resize';}
+  function onMove(x){if(!dragging)return;sidebar.style.width=Math.min(480,Math.max(140,startW+(x-startX)))+'px';}
+  function onEnd(){if(!dragging)return;dragging=false;resizer.classList.remove('dragging');document.body.style.userSelect='';document.body.style.cursor='';localStorage.setItem('sidebarWidth',sidebar.offsetWidth);}
+  resizer.addEventListener('mousedown',function(e){onStart(e.clientX);});
+  document.addEventListener('mousemove',function(e){onMove(e.clientX);});
+  document.addEventListener('mouseup',onEnd);
+  resizer.addEventListener('touchstart',function(e){onStart(e.touches[0].clientX);},{passive:true});
+  document.addEventListener('touchmove',function(e){onMove(e.touches[0].clientX);},{passive:true});
+  document.addEventListener('touchend',onEnd);
+  var saved=localStorage.getItem('sidebarWidth');
+  if(saved) sidebar.style.width=parseInt(saved)+'px';
 })();
 
-// ============================================================
-// SERVICE WORKER (OFFLINE SUPPORT)
-// ============================================================
-if ('serviceWorker' in navigator) {
-  // Inline service worker as blob URL
-  const swCode = `
-const CACHE = 'a321-mel-v1';
-self.addEventListener('install', e => {
-  e.waitUntil(
-    caches.open(CACHE).then(c => c.addAll([location.href || '/']))
-      .catch(() => {})
-  );
-  self.skipWaiting();
-});
-self.addEventListener('activate', e => {
-  e.waitUntil(clients.claim());
-});
-self.addEventListener('fetch', e => {
-  // Cache-first for same-origin, network-first for fonts/external
-  const url = new URL(e.request.url);
-  if (url.origin === location.origin || url.hostname === 'fonts.googleapis.com' || url.hostname === 'fonts.gstatic.com') {
-    e.respondWith(
-      caches.match(e.request).then(cached => {
-        if (cached) return cached;
-        return fetch(e.request).then(resp => {
-          const clone = resp.clone();
-          caches.open(CACHE).then(c => c.put(e.request, clone));
-          return resp;
-        }).catch(() => cached || new Response('Offline', {status: 503}));
-      })
-    );
-  }
-});
-  `;
-  const blob = new Blob([swCode], {type: 'application/javascript'});
-  const swUrl = URL.createObjectURL(blob);
-  navigator.serviceWorker.register(swUrl, {scope: './'}).catch(() => {});
+if('serviceWorker' in navigator){
+  var sw="const C='a321-v3';self.addEventListener('install',function(e){self.skipWaiting();});self.addEventListener('activate',function(e){e.waitUntil(clients.claim());});self.addEventListener('fetch',function(e){e.respondWith(caches.open(C).then(function(c){return c.match(e.request).then(function(r){var f=fetch(e.request).then(function(res){c.put(e.request,res.clone());return res;}).catch(function(){return r;});return r||f;});}));});";
+  var blob=new Blob([sw],{type:'application/javascript'});
+  navigator.serviceWorker.register(URL.createObjectURL(blob),{scope:'./'}).catch(function(){});
 }
+
+window.addEventListener('DOMContentLoaded', init);
 </script>
 </body>
-</html>
+    </html>
